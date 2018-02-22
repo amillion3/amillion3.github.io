@@ -1,0 +1,7 @@
+body {
+    background-color: aqua;
+}
+
+article section a img {
+    max-width: 48px;
+}
