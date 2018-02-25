@@ -9,8 +9,9 @@ body {
 article section a img {
     max-width: 48px;
 }
-header h3 {
+header h3, h4 {
     text-align: center;
+    padding-bottom: 10px;
 }
 /* Navbar stuff ___________________________________ */
 nav {
@@ -66,9 +67,8 @@ nav div::after {
     margin-bottom: 10px;
     background-color: rgb(238, 238, 238);
 }
-.primary-container article {
-    width: 45%;
-    float: left;
+body .primary-container article {
+    margin-bottom: 25px;
 }
 section a img {
     max-width: 48px;
@@ -77,9 +77,18 @@ section a img {
 article section img {
     width: 100%;
 }
-.primary-container article {
-    margin: 0 auto;
-    width: 100%;
+.primary-container .projects-wrapper {
+    width: 47%;
+    float: left;
+    margin: 15px 10px 15px 10px;
+    background-color: lightsteelblue;
+}
+#contact {
+    display: flex;
+    justify-content: center;
+}
+#contact section a img {
+    padding: 10px;
 }
 footer::after {
     content: "";
@@ -90,4 +99,5 @@ footer {
     padding: 25px 10px;
     color: gray;
     text-align: center;
+    width: 100%;
 }
