@@ -58,6 +58,7 @@ nav div::after {
     margin: 15px;
     padding: 10px;
     background-color: lightblue;
+    box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 }
 .primary-container {
     margin: 0 auto;
