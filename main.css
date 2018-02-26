@@ -89,7 +89,8 @@ article section img {
     justify-content: center;
 }
 #contact section a img {
-    padding: 10px;
+    margin: 10px;
+    padding: 5px;
 }
 footer::after {
     content: "";
@@ -101,4 +102,15 @@ footer {
     color: gray;
     text-align: center;
     width: 100%;
+}
+/* animation __________________________ */
+#contact section a img{
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    -ms-transition: -ms-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+#contact section a img:hover{
+    transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
 }
