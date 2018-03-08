@@ -1,5 +1,3 @@
-console.log("Hello");
-
 //  constructor function to create project object
 function Project (id, title, imageURL, description, githubURL) {
   this.id = id;
@@ -65,4 +63,25 @@ projectArray.push(
   )
 );
 
-console.log(projectArray);
+function writeToDom(domString) {
+  var myDiv = document.getElementById("my-projects");
+  myDiv.innerHTML += domString;
+}
+
+function createProjectCards() {
+  var toDom = "";
+  projectArray.forEach(function(element) {
+    toDom =
+      "<article class='projects-wrapper'>" +
+        "<section>" +
+            "<img src='" + element.imageURL + "'>" +
+            "<h4>" + element.title + "</h4>" +
+            "<p>" + element.description + "</p>" +
+            "<a href=" + element.githubURL + ">project link</a>" +
+        "</section>" +
+      "</article>";
+    writeToDom(toDom);
+  });
+}
+
+createProjectCards();
