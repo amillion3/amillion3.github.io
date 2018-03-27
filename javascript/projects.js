@@ -7,7 +7,7 @@ function Project (id, title, imageURL, description, githubURL) {
   this.githubURL = githubURL;
 }
 
-var projectArray = [];  //an array of objects, each containing a project
+let projectArray = [];  //an array of objects, each containing a project
 projectArray.push(
   new Project(
     "project1",
@@ -63,25 +63,25 @@ projectArray.push(
   )
 );
 
-function writeToDom(domString) {
-  var myDiv = document.getElementById("my-projects");
+const writeToDom = (domString) => {
+  const myDiv = document.getElementById("my-projects");
   myDiv.innerHTML += domString;
-}
+};
 
-function createProjectCards() {
-  var toDom = "";
+const createProjectCards = () => {
+  let toDom = "";
   projectArray.forEach(function(element) {
     toDom =
-      "<article class='projects-wrapper'>" +
-        "<section>" +
-            "<img src='" + element.imageURL + "'>" +
-            "<h4>" + element.title + "</h4>" +
-            "<p>" + element.description + "</p>" +
-            "<a href=" + element.githubURL + ">project link</a>" +
-        "</section>" +
-      "</article>";
+      `<article class="projects-wrapper">
+        <section>
+            <img src="${element.imageURL}">
+            <h4>${element.title}</h4>
+            <p>${element.description}</p>
+            <a href="${element.githubURL}">project link</a>
+        </section>
+      </article>`;
     writeToDom(toDom);
   });
-}
+};
 
 createProjectCards();

@@ -6,7 +6,7 @@ function BlogPost (id, title, date, post) {
   this.post = post;
 }
 
-var blogArray = [];  //an array of objects, each containing a blog post
+let blogArray = [];  //an array of objects, each containing a blog post
 blogArray.push(
   new BlogPost(
     "blog001",
@@ -49,20 +49,20 @@ blogArray.push(
   )
 );
 
-function writeToDom(domString) {
-  var myDiv = document.getElementById("my-blog");
+const writeToDom = (domString) => {
+  const myDiv = document.getElementById("my-blog");
   myDiv.innerHTML += domString;
-}
+};
 
-function createBlogPosts() {
-  var domOutput = "";
+const createBlogPosts = () => {
+  let domOutput = "";
   blogArray.forEach(function(element) {
     domOutput =
-      "<h4>" + element.title + "</h4>" +
-      "<h5>" + element.date + "</h5>" +
-      "<p>" + element.post + "</p>";
+      `<h4>${element.title}</h4>
+      <h5>${element.date}</h5>
+      <p>${element.post}</p>`;
     writeToDom(domOutput);
   });
-}
+};
 
 createBlogPosts();
