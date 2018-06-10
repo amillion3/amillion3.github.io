@@ -1,0 +1,22 @@
+body {
+  background-color: lightblue;
+}
+
+/* --------------------Navbar styling */
+nav {
+  border-radius: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+#navbar {
+  background-color: black;
+}
+#nav-home,
+#nav-resume,
+#nav-projects,
+#nav-blog,
+#nav-contact {
+  color: white;
+}
+/* ---------------end Navbar styling */
