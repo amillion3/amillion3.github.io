@@ -1,0 +1,55 @@
+body {
+  background-color: #F8F8FF;
+}
+html {
+  font-size: 16px;
+}
+h1, h2, h3 {
+  font-family: 'Ubuntu', sans-serif;
+}
+h4, h5, h6, p, a, li, ul {
+    font-family: 'Roboto', sans-serif;
+}
+h1 {
+  border-bottom: 0.5px solid black;
+}
+
+/* --------------------Navbar styling */
+nav {
+  border-radius: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+#navbar-mobile,
+#navbar-desktop {
+  background-color: black;
+}
+#nav-brand,
+#nav-home,
+#nav-resume,
+#nav-projects,
+#nav-blog,
+#nav-contact {
+  color: white;
+}
+/* ---------------end Navbar styling */
+
+/* ------ Container Home Styling */
+.img-personal-photo {
+  border-radius: 50%;
+}
+
+
+/* -- end Container Home Styling */
+
+/* ------ Container Resume Styling */
+
+/* -- end Container Resume Styling */
+
+
+/* --------------- Contact Styling */
+a img {
+  width: 100%;
+}
+/* ----------- end Contact Styling */
