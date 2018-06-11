@@ -1,8 +1,12 @@
 body {
   background-color: #F8F8FF;
+  margin: 0;
+  padding: 0;
 }
 html {
   font-size: 16px;
+  margin: 0;
+  padding: 0;
 }
 h1, h2, h3 {
   font-family: 'Ubuntu', sans-serif;
@@ -13,7 +17,11 @@ h4, h5, h6, p, a, li, ul {
 h1 {
   border-bottom: 0.5px solid black;
 }
-
+.container-fluid {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
 /* --------------------Navbar styling */
 nav {
   border-radius: 0;
@@ -22,16 +30,24 @@ nav {
   padding: 0;
 }
 #navbar-mobile,
-#navbar-desktop {
+#navbar-desktop,
+#bs-example-navbar-collapse-1 {
   background-color: black;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 #nav-brand,
 #nav-home,
 #nav-resume,
 #nav-projects,
 #nav-blog,
-#nav-contact {
-  color: white;
+#nav-contact,
+ {
+  color: #F8F8FF;
+}
+body {
+  padding-bottom: 70px;
 }
 /* ---------------end Navbar styling */
 

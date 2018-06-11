@@ -17,10 +17,9 @@ const retrieveKeys = () => {
     .then(results => {
       firebaseApi.setConfig(results.firebase);
       firebase.initializeApp(results.firebase);
-      checkLoginStatus();
     })
     .catch((err) => {
-      console.error('no keys:', err);
+      console.error('No keys found, ', err);
     });
 };
 
