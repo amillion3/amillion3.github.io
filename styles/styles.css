@@ -46,22 +46,23 @@ nav {
  {
   color: #F8F8FF;
 }
-body {
-  padding-bottom: 70px;
-}
+
 /* ---------------end Navbar styling */
 
-/* ------ Container Home Styling */
+/* ------ Container HOME Styling */
 .img-personal-photo {
   border-radius: 50%;
 }
-
-
-/* -- end Container Home Styling */
+/* -- end Container HOME Styling */
 
 /* ------ Container Resume Styling */
-
 /* -- end Container Resume Styling */
+
+/* ------ Container BLOG Styling */
+.blog-entry {
+  border: 1px solid black;
+}
+/* -- end Container BLOG Styling */
 
 
 /* --------------- Contact Styling */
@@ -69,3 +70,13 @@ a img {
   width: 100%;
 }
 /* ----------- end Contact Styling */
+
+/* --------------- Footer Styling */
+.footer-style {
+  padding: .8rem 1.5rem 0rem 1.5rem;
+  background-color: #dfdfe5;
+}
+body {
+  padding-bottom: 70px;
+}
+/* ----------- end Footer Styling */
