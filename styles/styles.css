@@ -56,7 +56,9 @@ nav {
 /* -- end Container HOME Styling */
 
 /* ------ Container Project Styling */
-
+.img-projects {
+  width: 100%;
+}
 /* -- end Container Project Styling */
 
 /* ------ Container Resume Styling */

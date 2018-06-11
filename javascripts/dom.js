@@ -6,22 +6,18 @@ const printToDom = (inputString, divId) => {
 const buildProjectString = inputProjects => {
   let output = '';
   inputProjects.projects.forEach((project, index) => {
-    let colSpacing = '';
     if (index % 3 === 0) {
       output += '<div class="row">';
-      colSpacing = 'col-md-offset-0 ';
-    } else {
-      colSpacing = 'col-md-offset-0 ';
     }
     output += `
-    <div id='${project.id}' class='project col-xs-offset-1 col-xs-10 ${colSpacing}col-md-4'>
+    <div id='${project.id}' class='project col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-4'>
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title text-center">${project.title}</h3>
         </div>
         <div class="panel-body">
           <div class='row'>
-            <img src="${project.imageURL}" alt="Project picture, ${project.title}">
+            <img class="text-center img-projects img-responsive" src="${project.imageURL}" alt="Project picture, ${project.title}">
           </div>
           <div class="row">
             <p>${project.description}</p>
