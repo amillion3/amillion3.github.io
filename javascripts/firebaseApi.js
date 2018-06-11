@@ -12,8 +12,8 @@ const getAllBlogs = () => {
         resolve(allBlogPostsObj);
       })
       .fail(error => {
-      reject(error);
-    });
+        reject(error);
+      });
   });
 };
 
@@ -27,12 +27,13 @@ const getAllProjects = () => {
         resolve(allProjectObj);
       })
       .fail(error => {
-      reject(error);
-    });
+        reject(error);
+      });
   });
 };
 
 module.exports = {
   getAllBlogs,
   getAllProjects,
+  setConfig,
 };
