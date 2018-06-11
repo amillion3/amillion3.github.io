@@ -5,6 +5,16 @@ const initialPageLoad = () => {
   $('#container-home').removeClass('hide');
 };
 
+const callForProjects = () => {
+  firebaseApi.getAllProjects()
+    .then(allProjectsArray => {
+      dom.buildProjectString(allProjectsArray);
+    })
+    .catch(err => {
+      console.error('Error getting projects, ', err);
+    });
+};
+
 const callForBlogs = () => {
   firebaseApi.getAllBlogs()
     .then(allBlogsArray => {
@@ -27,6 +37,7 @@ const navHome = () => {
 };
 const navProjects = () => {
   $('nav').on('click', '#nav-projects', e => {
+    callForProjects();
     $('#container-home').addClass('hide');
     $('#container-projects').removeClass('hide');
     $('#container-resume').addClass('hide');
