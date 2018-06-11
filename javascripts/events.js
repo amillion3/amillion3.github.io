@@ -1,6 +1,10 @@
 const firebaseApi = require('./firebaseApi');
 const dom = require ('./dom');
 
+const initialPageLoad = () => {
+  $('#container-home').removeClass('hide');
+};
+
 const callForBlogs = () => {
   firebaseApi.getAllBlogs()
     .then(allBlogsArray => {
@@ -45,7 +49,7 @@ const navBlog = () => {
     $('#container-home').addClass('hide');
     $('#container-projects').addClass('hide');
     $('#container-resume').addClass('hide');
-    $('#nav-blog').removeClass('hide');
+    $('#container-blog').removeClass('hide');
     $('#container-contact').addClass('hide');
   });
 };
@@ -61,6 +65,7 @@ const navContact = () => {
 //          END  Navbar click events
 
 const bindEvents = () => {
+  initialPageLoad();
   navHome();
   navProjects();
   navResume();
