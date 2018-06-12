@@ -6,15 +6,15 @@
       "imageURL": "http://via.placeholder.com/250x250",
       "description": "local-weather",
       "githubURL": "https://github.com/amillion3/local-weather",
-      "liveDemoURL": ""
+      "liveDemoURL": "https://local-weather-24172.firebaseapp.com/"
     },
     {
       "id": "project2",
-      "title": "Duckling",
+      "title": "Ex-Tracker",
       "imageURL": "http://via.placeholder.com/250x250",
-      "description": "Dwight you ignorant slut. Sometimes you just have to be the boss of dancing. Saddle shoes with denim? I will literally call Protective Services. I DECLARE BANKRUPTCY! In an ideal world I would have all ten fingers on my left hand and the right one would just be left for punching.",
-      "githubURL": "",
-      "liveDemoURL": ""
+      "description": "ex-tracker",
+      "githubURL": "https://github.com/amillion3/ex-tracker",
+      "liveDemoURL": "https://ex-tracker-4ddb9.firebaseapp.com/"
     },
     {
       "id": "project3",
