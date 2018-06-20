@@ -1,52 +1,49 @@
-{
-  "projects": [
-    {
-      "id": "project1",
-      "title": "Local Weather",
-      "imageURL": "http://via.placeholder.com/250x250",
-      "description": "local-weather",
-      "githubURL": "https://github.com/amillion3/local-weather",
-      "liveDemoURL": "https://local-weather-24172.firebaseapp.com/"
-    },
-    {
-      "id": "project2",
-      "title": "Ex-Tracker",
-      "imageURL": "http://via.placeholder.com/250x250",
-      "description": "ex-tracker",
-      "githubURL": "https://github.com/amillion3/ex-tracker",
-      "liveDemoURL": "https://ex-tracker-4ddb9.firebaseapp.com/"
-    },
-    {
-      "id": "project3",
-      "title": "Hedgehog",
-      "imageURL": "http://via.placeholder.com/250x250",
-      "description": "Crazy world. Lotta smells. I'll be the Number Two guy here in Scranton in six weeks. How? Name repetition, personality mirroring, and never breaking off a handshake. I'm always thinking one step ahead. Like a carpenter that makes stairs. DID I STUTTER?",
-      "githubURL": "",
-      "liveDemoURL": ""
-    },
-    {
-      "id": "project4",
-      "title": "Panda",
-      "imageURL": "http://via.placeholder.com/250x250",
-      "description": "What is wrong with these people? They have no willpower. I went -- I once went 28 years without having sex. And then again for seven years. I don't understand the desire to push sweet potato fries on me. I just want regular fries. Oh God, my mind is going a mile an hour.",
-      "githubURL": "",
-      "liveDemoURL": ""
-    },
-    {
-      "id": "project5",
-      "title": "Sloth",
-      "imageURL": "http://via.placeholder.com/250x250",
-      "description": "If I had a gun with two bullets and I was in a room with Hitler, Bin Laden, and Toby, I would shoot Toby twice. Just pretend like we're talking until the cops leave. Dwight you ignorant slut. I love catching people in the act. That's why I always whip open doors.",
-      "githubURL": "",
-      "liveDemoURL": ""
-    },
-    {
-      "id": "project1",
-      "title": "Fox",
-      "imageURL": "http://via.placeholder.com/250x250",
-      "description": "There is no such thing as an appropriate joke, that's why it's a joke. You couldn't handle my undivided attention. Every word out of your mouth is like the squawk of an ugly pelican. I feel God in this Chili's. I sprout mung beans on a damp paper towel in my desk drawer. Very nutritious. But they smell like death.",
-      "githubURL": "",
-      "liveDemoURL": ""
-    }
-  ]
-}
+
+  {
+    "id": "project1",
+    "title": "Local Weather",
+    "imageURL": "http://via.placeholder.com/250x250",
+    "description": "local-weather",
+    "githubURL": "https://github.com/amillion3/local-weather",
+    "liveDemoURL": "https://local-weather.andymillion.com/"
+  },
+  {
+    "id": "project2",
+    "title": "Ex-Tracker",
+    "imageURL": "http://via.placeholder.com/250x250",
+    "description": "ex-tracker",
+    "githubURL": "https://github.com/amillion3/ex-tracker",
+    "liveDemoURL": "https://ex-tracker.andymillion.com/"
+  },
+  {
+    "id": "project3",
+    "title": "Hedgehog",
+    "imageURL": "http://via.placeholder.com/250x250",
+    "description": "Crazy world. Lotta smells. I'll be the Number Two guy here in Scranton in six weeks. How? Name repetition, personality mirroring, and never breaking off a handshake. I'm always thinking one step ahead. Like a carpenter that makes stairs. DID I STUTTER?",
+    "githubURL": "",
+    "liveDemoURL": ""
+  },
+  {
+    "id": "project4",
+    "title": "Panda",
+    "imageURL": "http://via.placeholder.com/250x250",
+    "description": "What is wrong with these people? They have no willpower. I went -- I once went 28 years without having sex. And then again for seven years. I don't understand the desire to push sweet potato fries on me. I just want regular fries. Oh God, my mind is going a mile an hour.",
+    "githubURL": "",
+    "liveDemoURL": ""
+  },
+  {
+    "id": "project5",
+    "title": "Sloth",
+    "imageURL": "http://via.placeholder.com/250x250",
+    "description": "If I had a gun with two bullets and I was in a room with Hitler, Bin Laden, and Toby, I would shoot Toby twice. Just pretend like we're talking until the cops leave. Dwight you ignorant slut. I love catching people in the act. That's why I always whip open doors.",
+    "githubURL": "",
+    "liveDemoURL": ""
+  },
+  {
+    "id": "project1",
+    "title": "Fox",
+    "imageURL": "http://via.placeholder.com/250x250",
+    "description": "There is no such thing as an appropriate joke, that's why it's a joke. You couldn't handle my undivided attention. Every word out of your mouth is like the squawk of an ugly pelican. I feel God in this Chili's. I sprout mung beans on a damp paper towel in my desk drawer. Very nutritious. But they smell like death.",
+    "githubURL": "",
+    "liveDemoURL": ""
+  }
