@@ -59,6 +59,10 @@ nav {
 .img-projects {
   width: 100%;
 }
+.btn-projects {
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
 /* -- end Container Project Styling */
 
 /* ------ Container Resume Styling */
@@ -86,3 +90,11 @@ body {
   padding-bottom: 70px;
 }
 /* ----------- end Footer Styling */
+
+/* * ----------- end Footer Styling */
+@media all and (min-width:480px) {
+  .custom-class {
+    margin-bottom: 0;
+  }
+}
+/* * ----------- end Footer Styling */

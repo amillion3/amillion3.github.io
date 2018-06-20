@@ -13,7 +13,7 @@ const buildProjectString = inputProjects => {
     <div id='${project.id}' class='project col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-4'>
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title text-center">${project.title}</h3>
+          <h2 class="panel-title text-center"><strong>${project.title}</strong></h2>
         </div>
         <div class="panel-body">
           <div class='row'>
@@ -23,8 +23,12 @@ const buildProjectString = inputProjects => {
             <p>${project.description}</p>
           </div>
           <div class="row">
-            <a href="${project.githubURL}" target="_blank" alt="Link to GitHub" class="btn btn-info btn-block">GitHub</a>
-            <a href="${project.liveDemoURL}" target="_blank" alt="Link to Live Demo" class="btn btn-info btn-block">Live Demo</a>
+            <div class="col-xs-12 col-sm-6">
+              <a href="${project.githubURL}" target="_blank" alt="Link to GitHub" class="btn btn-info btn-projects">GitHub</a>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <a href="${project.liveDemoURL}" target="_blank" alt="Link to Live Demo" class="btn btn-info btn-projects">Live Demo</a>
+            </div>
           </div>
         </div>
       </div>
