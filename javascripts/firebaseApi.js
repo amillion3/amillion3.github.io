@@ -18,13 +18,21 @@ const getAllBlogs = () => {
 };
 
 const getAllProjects = () => {
+  const projectArray = [];
   return new Promise((resolve, reject) => {
     $.ajax({
       method: 'GET',
       url: `${firebaseConfig.databaseURL}/projects.json`,
     })
       .done(allProjectObj => {
-        resolve(allProjectObj);
+        allProjectObj = allProjectObj.projects;
+        if (allProjectObj !== null) {
+          Object.keys(allProjectObj).forEach(fbKey => {
+            allProjectObj[fbKey].id = fbKey;
+            projectArray.push(allProjectObj[fbKey]);
+          });
+        }
+        resolve(projectArray);
       })
       .fail(error => {
         reject(error);

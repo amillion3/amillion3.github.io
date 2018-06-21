@@ -5,7 +5,7 @@ const printToDom = (inputString, divId) => {
 
 const buildProjectString = inputProjects => {
   let output = '';
-  inputProjects.projects.forEach((project, index) => {
+  inputProjects.forEach((project, index) => {
     if (index % 3 === 0) {
       output += '<div class="row">';
     }
