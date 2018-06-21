@@ -1,8 +1,10 @@
 body {
-  background-color: #F8F8FF;
+  background-color: #000;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #F8F8FF;
 }
 html {
   font-size: 16px;
@@ -10,10 +12,10 @@ html {
   padding: 0;
 }
 h1, h2, h3 {
-  font-family: 'Ubuntu', sans-serif;
+
 }
 h4, h5, h6, p, a, li, ul {
-    font-family: 'Roboto', sans-serif;
+
 }
 h1 {
   border-bottom: 0.5px solid black;
@@ -24,6 +26,42 @@ h1 {
   border: none;
 }
 /* --------------------Navbar styling */
+.navbar {
+  border: none;
+}
+
+/* Hamburger menu, background color */
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-toggle:hover,
+.navbar-toggle,
+.navbar-default .navbar-toggle:focus
+{
+  background-color: #f33386;
+}
+/* Hamburger menu, outer border */
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+  border-color: #f09301;
+}
+/* Hamburger menu, horizontal lines */
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #f09301;
+}
+/* Mobile navbar items */
+.navbar-default .navbar-nav>li>a {
+  color: #000;
+  size: 1.5rem;
+  letter-spacing: .1rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .navbar-default .navbar-nav>li>a {
+    border-top: 1px solid black;
+  }
+}
+
 nav {
   border-radius: 0;
   border: none;
@@ -33,7 +71,7 @@ nav {
 #navbar-mobile,
 #navbar-desktop,
 #bs-example-navbar-collapse-1 {
-  background-color: black;
+  background-color: #f33386;
   border: none;
   margin: 0;
   padding: 0;
@@ -46,6 +84,17 @@ nav {
 #nav-contact,
  {
   color: #F8F8FF;
+}
+
+#nav-brand {
+  padding-left: 5vw;
+  font-size: 2.5rem;
+}
+#nav-brand,
+#navbar-desktop,
+#bs-example-navbar-collapse-1 {
+  color: #000;
+
 }
 
 /* ---------------end Navbar styling */
