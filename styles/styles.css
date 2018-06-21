@@ -1,6 +1,6 @@
 body {
   background-color: #000;
-  margin: 0;
+  margin: 0 0 0 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif;
@@ -14,8 +14,14 @@ body {
 }
 html {
   font-size: 16px;
-  margin: 0;
+  margin: 0 0 0 0;
   padding: 0;
+}
+body,
+html {
+  height: calc(100% - 2.0rem);
+  /* margin-bottom: 50px; */
+  overflow: scroll;
 }
 section {
   overflow: scroll;
@@ -174,15 +180,26 @@ a img {
 /* --------------- Footer Styling */
 .footer-icons {
   padding: 0 1.5rem .5rem 0;
+  text-align: center;
+  background-color: rgba(243, 51, 134, .8);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 3rem;
+
+}
+.navbar-fixed-bottom {
+  width: 100%;
+  height: 3rem;
 }
 .fab,
 .far {
   padding:1rem;
   color: #f09301;
 }
-body {
+/* body {
   padding-bottom: 70px;
-}
+} */
 /* ----------- end Footer Styling */
 
 
