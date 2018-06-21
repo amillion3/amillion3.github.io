@@ -19,7 +19,7 @@ const buildProjectString = inputProjects => {
           <div class='row'>
             <img class="text-center img-projects img-responsive" src="${project.imageURL}" alt="Project picture, ${project.title}">
           </div>
-          <div class="row">
+          <div class="row div-projects">
             <p>${project.description}</p>
           </div>
           <div class="row">
