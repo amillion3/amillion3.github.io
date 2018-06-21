@@ -70,6 +70,7 @@ nav {
 
 .panel-body {
   padding-top: 0;
+  padding-bottom: 0;
 }
 .div-projects {
   padding-left: 7%;
@@ -77,8 +78,13 @@ nav {
 }
 .tech-icon-svg {
   max-width: 2rem;
+  padding: 0 .2rem 0 .2rem;
 }
-
+.panel-footer {
+  background-color: #ffffff;
+  border-top: none;
+  padding-top: 0;
+}
 /* -- end Container Project Styling */
 
 /* ------ Container Resume Styling */

@@ -6,8 +6,8 @@ const printToDom = (inputString, divId) => {
 const buildIconStringForInsertion = input => {
   let output = '';
   const icons = input.techIcons;
-
   if (icons) {
+    output += `<div class="panel-footer tech-icons text-center">`;
     icons.forEach(i => {
       if (i === 'browserify') {
         output += `<img src='../img/icons/browserify.svg' class='tech-icon-svg' alt='Browserify logo'>`;
@@ -27,6 +27,7 @@ const buildIconStringForInsertion = input => {
         output += `<img src='../img/icons/nodejs.svg' class='tech-icon-svg' alt='NodeJS logo'>`;
       }
     });
+    output += `</div>`;
     return output;
   }
   return output;
