@@ -55,10 +55,14 @@ const buildProjectString = inputProjects => {
           <div class="row">
             <div class="col-xs-12 col-sm-6">
               <a href="${project.githubURL}" target="_blank" alt="Link to GitHub" class="btn btn-info btn-projects">GitHub</a>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-              <a href="${project.liveDemoURL}" target="_blank" alt="Link to Live Demo" class="btn btn-info btn-projects">Live Demo</a>
-            </div>
+            </div>`;
+    if (project.isLive) {
+      output += `
+        <div class="col-xs-12 col-sm-6">
+          <a href="${project.liveDemoURL}" target="_blank" alt="Link to Live Demo" class="btn btn-info btn-projects">Live Demo</a>
+        </div>`;
+    }
+    output += `
           </div>
         </div>
         ${buildIconStringForInsertion(project)}
