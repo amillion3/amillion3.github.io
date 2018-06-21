@@ -3,6 +3,35 @@ const printToDom = (inputString, divId) => {
   $(divId).html(inputString);
 };
 
+const buildIconStringForInsertion = input => {
+  let output = '';
+  const icons = input.techIcons;
+
+  if (icons) {
+    icons.forEach(i => {
+      if (i === 'browserify') {
+        output += `<img src='../img/icons/browserify.svg' class='tech-icon-svg' alt='Browserify logo'>`;
+      } else if (i === 'css3') {
+        output += `<img src='../img/icons/css3.svg' class='tech-icon-svg' alt='CSS3 logo'>`;
+      }  else if (i === 'es6') {
+        output += `<img src='../img/icons/es6.svg' class='tech-icon-svg' alt='JavaScript ES6 logo'>`;
+      } else if (i === 'firebase') {
+        output += `<img src='../img/icons/firebase.svg' class='tech-icon-svg' alt='Firebase logo'>`;
+      } else if (i === 'grunt') {
+        output += `<img src='../img/icons/grunt.svg' class='tech-icon-svg' alt='Grunt logo'>`;
+      } else if (i === 'html5') {
+        output += `<img src='../img/icons/html5.svg' class='tech-icon-svg' alt='HTML5 logo'>`;
+      } else if (i === 'jquery') {
+        output += `<img src='../img/icons/jquery.svg' class='tech-icon-svg' alt='jQuery logo'>`;
+      } else if (i === 'node') {
+        output += `<img src='../img/icons/nodejs.svg' class='tech-icon-svg' alt='NodeJS logo'>`;
+      }
+    });
+    return output;
+  }
+  return output;
+};
+
 const buildProjectString = inputProjects => {
   let output = '';
   inputProjects.forEach((project, index) => {
@@ -31,6 +60,7 @@ const buildProjectString = inputProjects => {
             </div>
           </div>
         </div>
+        ${buildIconStringForInsertion(project)}
       </div>
     </div>
     `;

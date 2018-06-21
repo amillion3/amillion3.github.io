@@ -75,6 +75,9 @@ nav {
   padding-left: 7%;
   padding-right: 7%;
 }
+.tech-icon-svg {
+  max-width: 2rem;
+}
 
 /* -- end Container Project Styling */
 
