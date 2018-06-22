@@ -1,19 +1,51 @@
 body {
-  background-color: #F8F8FF;
-  margin: 0;
+  background-color: #000;
+  margin: 0 0 0 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #F8F8FF;
+
+  background-image: url('../img/backgroundimage/uCw9VpO_cropped-767px.png');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 35%;
 }
 html {
   font-size: 16px;
-  margin: 0;
+  margin: 0 0 0 0;
   padding: 0;
+  overflow-y: hidden;
 }
+body {
+  overflow-y: scroll;
+}
+body,
+html {
+  height: calc(100% - 2.0rem);
+}
+section {
+  /* overflow-y: scroll; */
+  padding: 0;
+  margin: 0;
+}
+/* --------------------Scrollbar styling */
+/* #scroll-it::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+#scroll-it::-webkit-scrollbar-thumb {
+	background-color: #000000;
+	border: 2px solid #555555;
+} */
+/* ----------------end Scrollbar styling */
+
 h1, h2, h3 {
-  font-family: 'Ubuntu', sans-serif;
+
 }
 h4, h5, h6, p, a, li, ul {
-    font-family: 'Roboto', sans-serif;
+
 }
 h1 {
   border-bottom: 0.5px solid black;
@@ -24,6 +56,44 @@ h1 {
   border: none;
 }
 /* --------------------Navbar styling */
+.navbar {
+  border: none;
+}
+
+/* Hamburger menu, background color */
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-toggle:hover,
+.navbar-toggle,
+.navbar-default .navbar-toggle:focus
+{
+  background-color: #f33386;
+}
+/* Hamburger menu, outer border */
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+  border-color: #f09301;
+}
+/* Hamburger menu, horizontal lines */
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #f09301;
+}
+/* Mobile navbar items */
+.navbar-default .navbar-nav>li>a {
+  color: #000;
+  size: 1.5rem;
+  letter-spacing: .1rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .navbar-default .navbar-nav>li>a {
+    border-top: 1px solid #db0d59;
+  }
+}
+
+/* to do media queries */
+
 nav {
   border-radius: 0;
   border: none;
@@ -33,19 +103,29 @@ nav {
 #navbar-mobile,
 #navbar-desktop,
 #bs-example-navbar-collapse-1 {
-  background-color: black;
+  background-color: #f33386;
   border: none;
   margin: 0;
   padding: 0;
 }
-#nav-brand,
-#nav-home,
-#nav-resume,
-#nav-projects,
-#nav-blog,
-#nav-contact,
+#nav-home>li>a ,
+#nav-resume>li>a ,
+#nav-projects>li>a ,
+#nav-blog>li>a ,
+#nav-contact>li>a ,
  {
-  color: #F8F8FF;
+  size: 8rem;
+}
+
+#nav-brand {
+  padding-left: 5vw;
+  font-size: 2.5rem;
+}
+#nav-brand,
+#navbar-desktop,
+#bs-example-navbar-collapse-1 {
+  color: #000;
+
 }
 
 /* ---------------end Navbar styling */
@@ -63,11 +143,17 @@ nav {
   border: 4px solid white;
   padding: .5rem;
 }
+.panel {
+  border: none;
+  margin: 1rem 1rem;
+}
 .btn-projects {
   width: 100%;
   margin-bottom: 0.8rem;
 }
-
+.panel-default>.panel-heading {
+  background-color: #ffffff;
+}
 .panel-body {
   padding-top: 0;
   padding-bottom: 0;
@@ -82,8 +168,11 @@ nav {
 }
 .panel-footer {
   background-color: #ffffff;
-  border-top: none;
-  padding-top: 0;
+  border-top: 6px solid #f09301;
+  padding-top: .75rem;
+}
+.div-projects p {
+  color: #000;
 }
 /* -- end Container Project Styling */
 
@@ -104,19 +193,58 @@ a img {
 /* ----------- end Contact Styling */
 
 /* --------------- Footer Styling */
-.footer-style {
-  padding: .8rem 1.5rem 0rem 1.5rem;
-  background-color: #dfdfe5;
+.footer-icons {
+  padding: 0 1.5rem .5rem 0;
+  text-align: center;
+  background-color: rgba(243, 51, 134, .8);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 3rem;
+  width: 100%;
 }
-body {
+.navbar-fixed-bottom {
+  width: 100%;
+  height: 3rem;
+}
+.fab,
+.far {
+  padding:1rem;
+  color: #f09301;
+}
+/* body {
   padding-bottom: 70px;
-}
+} */
 /* ----------- end Footer Styling */
 
-/* * ----------- end Footer Styling */
+
 @media all and (min-width:480px) {
   .custom-class {
     margin-bottom: 0;
   }
 }
-/* * ----------- end Footer Styling */
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+  body {
+    background-image: url('../img/backgroundimage/uCw9VpO_cropped-991px.png');
+  }
+  .footer-icons {
+    padding: 0 1.5rem .5rem 0;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+  body {
+    background-image: url('../img/backgroundimage/uCw9VpO_cropped.png');
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+
+}

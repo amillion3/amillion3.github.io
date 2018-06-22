@@ -3,13 +3,19 @@ let firebaseConfig = {};
 const setConfig = input => { firebaseConfig = input; };
 
 const getAllBlogs = () => {
+  const blogsArray = [];
   return new Promise((resolve, reject) => {
     $.ajax({
       method: 'GET',
       url: `${firebaseConfig.databaseURL}/blogs.json`,
     })
       .done(allBlogPostsObj => {
-        resolve(allBlogPostsObj);
+        allBlogPostsObj = allBlogPostsObj.blogposts;
+        Object.keys(allBlogPostsObj).forEach(fbKey => {
+          allBlogPostsObj[fbKey].id = fbKey;
+          blogsArray.push(allBlogPostsObj[fbKey]);
+        });
+        resolve(blogsArray);
       })
       .fail(error => {
         reject(error);

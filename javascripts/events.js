@@ -25,7 +25,7 @@ const callForBlogs = () => {
     });
 };
 
-//          Navbar click events
+//  Navbar click events
 const navHome = () => {
   $('nav').on('click', '#nav-home', e => {
     $('#container-home').removeClass('hide');
@@ -73,7 +73,7 @@ const navContact = () => {
     $('#container-contact').removeClass('hide');
   });
 };
-//          END  Navbar click events
+//  END  Navbar click events
 
 const bindEvents = () => {
   initialPageLoad();

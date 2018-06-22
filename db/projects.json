@@ -27,7 +27,7 @@
       "description": "Group Project. We had 7 days to create a Facebook-like, single page app. Using Firebase, we had to setup authentication, specifically, register and login functionality. Logged in users can use these 5 modules with full CRUD capabilities: messaging, events, tasking, friends, and articles. This is light on the styling, but heavy on the concepts and teamwork.",
       "techIcons": ["grunt","browserify","node","es6", "jquery","firebase", "css3","html5"],
       "isLive": true,
-      "githubURL": "https://github.com/nss-evening-cohort-7/nutshell-adobe-bricks",
+      "githubURL": "https://github.com/amillion3/nutshell-adobe-bricks",
       "liveDemoURL": "https://nutshell-df075.firebaseapp.com/"
     },
     "four": {
