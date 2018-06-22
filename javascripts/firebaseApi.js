@@ -39,7 +39,6 @@ const getAllProjects = () => {
             projectArray.push(allProjectObj[fbKey]);
           });
         }
-        console.error(projectArray);
         projectArray.sort((a, b) => {
           return a.projectId - b.projectId;
         });

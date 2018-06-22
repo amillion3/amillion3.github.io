@@ -27,7 +27,7 @@ const callForBlogs = () => {
 
 //  Navbar click events
 const navHome = () => {
-  $('nav').on('click', '#nav-home', e => {
+  $('#nav').on('click', '#nav-home', e => {
     $('#container-home').removeClass('hide');
     $('#outer-container-projects').addClass('hide');
     $('#container-resume').addClass('hide');

@@ -59,6 +59,15 @@ h1 {
 .navbar {
   border: none;
 }
+.inactive {
+  background-color: #f33386;
+  border: none;
+}
+.active {
+  background-color: #000;
+  border: 1px solid #f33386;
+  color: #f09301!important;
+}
 
 /* Hamburger menu, background color */
 .navbar-default .navbar-toggle,
@@ -108,11 +117,11 @@ nav {
   margin: 0;
   padding: 0;
 }
-#nav-home>li>a ,
-#nav-resume>li>a ,
-#nav-projects>li>a ,
-#nav-blog>li>a ,
-#nav-contact>li>a ,
+#nav-home,
+#nav-resume,
+#nav-projects,
+#nav-blog,
+#nav-contact,
  {
   size: 8rem;
 }
