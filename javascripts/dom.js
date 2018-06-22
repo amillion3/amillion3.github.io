@@ -75,19 +75,19 @@ const buildProjectString = inputProjects => {
 };
 
 const buildBlogString = inputBlogs => {
-  let output = '';
+  let output = '<h2 class="text-center">Million\'s Musings</h2>';
   inputBlogs.forEach(blog => {
     output += `
-    <div id='${blog.id}' class='row blog-entry col-xs-offset-1 col-xs-10'>
-      <div>
+    <div id='${blog.id}' class='row blog-entry col-xs-offset-2 col-xs-8'>
+      <div class='blog-title'>
         <div class='text-left col-xs-6'>
-          <h4>${blog.title}</h4>
+          <h4 class='blog-entry-title'>${blog.title}</h4>
         </div>
         <div class='text-right col-xs-6'>
           <h5><em>${blog.date}</em></h5>
         </div>
       </div>
-      <div class='row col-xs-12'>
+      <div class='row col-xs-12 blog-single-entry'>
         <p>${blog.post}</p>
       </div>
     </div>`;
