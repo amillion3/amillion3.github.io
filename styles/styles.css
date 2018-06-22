@@ -212,9 +212,9 @@ a img {
   padding:1rem;
   color: #f09301;
 }
-/* body {
-  padding-bottom: 70px;
-} */
+.footer-nav-buttons {
+  display: none;
+}
 /* ----------- end Footer Styling */
 
 
@@ -250,6 +250,9 @@ a img {
   .footer-icons {
     padding: 0 1.5rem .5rem 0;
   }
+  .footer-nav-buttons {
+    display: initial;
+  }
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -257,8 +260,15 @@ a img {
   body {
     background-image: url('../img/backgroundimage/uCw9VpO_cropped.png');
     background-size: 55%;
-    padding: 0 0 30rem 0;
+    padding: 0 0 20rem 0;
     /* The above gives space at bottom for graphic */
+  }
+  html {
+
+    overflow-y: hidden;
+  }
+  body {
+    overflow-y: auto;
   }
 }
 
