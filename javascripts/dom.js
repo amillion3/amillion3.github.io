@@ -76,7 +76,7 @@ const buildProjectString = inputProjects => {
 
 const buildBlogString = inputBlogs => {
   let output = '';
-  inputBlogs.blogposts.forEach(blog => {
+  inputBlogs.forEach(blog => {
     output += `
     <div id='${blog.id}' class='row blog-entry col-xs-offset-1 col-xs-10'>
       <div>
