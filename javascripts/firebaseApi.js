@@ -7,13 +7,15 @@ const getAllBlogs = () => {
   return new Promise((resolve, reject) => {
     $.ajax({
       method: 'GET',
-      url: `${firebaseConfig.databaseURL}/blogs.json`,
+      url: `${firebaseConfig.databaseURL}/blogs.json?orderBy="id"`,
     })
       .done(allBlogPostsObj => {
-        allBlogPostsObj = allBlogPostsObj.blogposts;
         Object.keys(allBlogPostsObj).forEach(fbKey => {
           allBlogPostsObj[fbKey].id = fbKey;
           blogsArray.push(allBlogPostsObj[fbKey]);
+        });
+        blogsArray.sort((a, b) => {
+          return new Date(a.date) - new Date(b.date);
         });
         resolve(blogsArray);
       })
@@ -31,13 +33,15 @@ const getAllProjects = () => {
       url: `${firebaseConfig.databaseURL}/projects.json`,
     })
       .done(allProjectObj => {
-        allProjectObj = allProjectObj.projects;
         if (allProjectObj !== null) {
           Object.keys(allProjectObj).forEach(fbKey => {
             allProjectObj[fbKey].id = fbKey;
             projectArray.push(allProjectObj[fbKey]);
           });
         }
+        projectArray.sort((a, b) => {
+          return a.projectId - b.projectId;
+        });
         resolve(projectArray);
       })
       .fail(error => {

@@ -1,7 +1,7 @@
 body {
   background-color: #000;
   margin: 0 0 0 0;
-  padding: 0;
+  padding: 0 0 12rem 0;
   box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif;
   color: #F8F8FF;
@@ -10,7 +10,7 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: bottom;
-  background-size: 35%;
+  background-size: 60%;
 }
 html {
   font-size: 16px;
@@ -23,7 +23,7 @@ body {
 }
 body,
 html {
-  height: calc(100% - 2.0rem);
+  height: calc(100% - 1.51rem);
 }
 section {
   /* overflow-y: scroll; */
@@ -108,15 +108,10 @@ nav {
   margin: 0;
   padding: 0;
 }
-#nav-home>li>a ,
-#nav-resume>li>a ,
-#nav-projects>li>a ,
-#nav-blog>li>a ,
-#nav-contact>li>a ,
- {
-  size: 8rem;
+/* Nav item text size */
+.navbar-default .navbar-nav>li>a {
+  font-size: 1.3rem;
 }
-
 #nav-brand {
   padding-left: 5vw;
   font-size: 2.5rem;
@@ -125,9 +120,7 @@ nav {
 #navbar-desktop,
 #bs-example-navbar-collapse-1 {
   color: #000;
-
 }
-
 /* ---------------end Navbar styling */
 
 /* ------ Container HOME Styling */
@@ -212,9 +205,9 @@ a img {
   padding:1rem;
   color: #f09301;
 }
-/* body {
-  padding-bottom: 70px;
-} */
+.footer-nav-buttons {
+  display: none;
+}
 /* ----------- end Footer Styling */
 
 
@@ -224,27 +217,60 @@ a img {
   }
 }
 
+@media all and (min-width:430px) {
+  body {
+    background-size: 65%;
+    padding: 0 0 14rem 0;
+  }
+}
+@media all and (min-width:500px) {
+  body {
+    background-size: 55%;
+    padding: 0 0 18rem 0;
+  }
+}
+
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) {
+@media all and (min-width: 768px) {
   body {
     background-image: url('../img/backgroundimage/uCw9VpO_cropped-991px.png');
+    background-size: 55%;
+    padding: 0 0 22rem 0;
   }
   .footer-icons {
     padding: 0 1.5rem .5rem 0;
   }
+  .footer-nav-buttons {
+    display: initial;
+  }
 }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) {
+@media (min-width: 992px) {
   body {
     background-image: url('../img/backgroundimage/uCw9VpO_cropped.png');
+    background-size: 55%;
+    padding: 0 0 20rem 0;
+    /* The above gives space at bottom for graphic */
+  }
+  html {
+
+    overflow-y: hidden;
+  }
+  body {
+    overflow-y: auto;
   }
 }
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) {
-
+@media (min-width: 1200px) {
+  body {
+    background-image: url('../img/backgroundimage/uCw9VpO_cropped.png');
+    background-size: 35%;
+    padding: 0 0 30rem 0;
+    /* The above gives space at bottom for graphic */
+  }
 }
