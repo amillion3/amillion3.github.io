@@ -170,6 +170,15 @@ nav {
 /* -- end Container Project Styling */
 
 /* ------ Container Resume Styling */
+.resume-header {
+  padding-bottom: 3rem;
+}
+.resume-header-2 {
+  padding-bottom: 1.5rem;
+}
+.resume-company {
+  border-bottom: 6px solid #f09301;
+}
 /* -- end Container Resume Styling */
 
 /* ------ Container BLOG Styling */
