@@ -14,6 +14,9 @@ const getAllBlogs = () => {
           allBlogPostsObj[fbKey].id = fbKey;
           blogsArray.push(allBlogPostsObj[fbKey]);
         });
+        blogsArray.sort((a, b) => {
+          return new Date(a.date) - new Date(b.date);
+        });
         resolve(blogsArray);
       })
       .fail(error => {
