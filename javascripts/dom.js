@@ -78,7 +78,7 @@ const buildBlogString = inputBlogs => {
   let output = '<h2 class="text-center">Million\'s Musings</h2>';
   inputBlogs.forEach(blog => {
     output += `
-    <div id='${blog.id}' class='row blog-entry col-xs-offset-2 col-xs-8'>
+    <div id='${blog.id}' class='row blog-entry col-xs-offset-1 col-xs-11'>
       <div class='blog-title'>
         <div class='text-left col-xs-6'>
           <h4 class='blog-entry-title'>${blog.title}</h4>
