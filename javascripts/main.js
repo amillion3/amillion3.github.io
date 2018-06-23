@@ -7,4 +7,5 @@ data.initializer();
 // TO DO
 // Figure out how to hide content behind the footer in regular view
 // 'Active' buttons/tabs for the page you are on
-// fix 'home' page links
+// shrink spacing on mobile resume headings
+// make blogs wider on mobile
