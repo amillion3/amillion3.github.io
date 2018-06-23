@@ -127,6 +127,9 @@ nav {
 .img-personal-photo {
   border-radius: 50%;
 }
+#personal-bio p {
+  font-size: 1.1rem;
+}
 /* -- end Container HOME Styling */
 
 /* ------ Container Project Styling */
@@ -202,6 +205,40 @@ nav {
 a img {
   width: 100%;
 }
+.fa-phone,
+a .icon {
+  padding: 1.5rem;
+  color: #f09301;
+  transform: scale(1) rotate(-360deg);
+  transition-duration: .8s;
+}
+.fa-phone:hover,
+a .icon:hover {
+  padding:1.5rem;
+  color: #f33386;
+  transform: scale(1.2) rotate(360deg);
+  transition-duration: 1.3s;
+}
+.contact-hover-active {
+  color: #f33386;
+  transform: scale(1.2);
+  transition: 1.3s;
+}
+.link-hover-active {
+  transform: translateY(-1rem);
+  transition-duration: 1.3s;
+}
+
+.contact-link,
+.contact-link:link,
+.contact-link:active,
+.contact-link:visited,
+.contact-link:hover {
+  color: white;
+  text-decoration: none;
+}
+
+
 /* ----------- end Contact Styling */
 
 /* --------------- Footer Styling */

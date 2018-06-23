@@ -75,6 +75,59 @@ const navContact = () => {
 };
 //  END  Navbar click events
 
+const contactHover = () => {
+  $(document).on({
+    mouseenter: e => {
+      const target = e.target.id;
+      if (target === 'icon-phone') {
+        $('#contact-phone').addClass('contact-hover-active');
+      } else if (target === 'icon-email') {
+        $('#contact-email').addClass('contact-hover-active');
+      } else if (target === 'icon-github') {
+        $('#contact-github').addClass('contact-hover-active');
+      } else if (target === 'icon-twitter') {
+        $('#contact-twitter').addClass('contact-hover-active');
+      } else if (target === 'icon-linkedin') {
+        $('#contact-linkedin').addClass('contact-hover-active');
+      }
+    },
+    mouseleave: () => {
+      $('#contact-phone').removeClass('contact-hover-active');
+      $('#contact-email').removeClass('contact-hover-active');
+      $('#contact-github').removeClass('contact-hover-active');
+      $('#contact-twitter').removeClass('contact-hover-active');
+      $('#contact-linkedin').removeClass('contact-hover-active');
+    },
+  }, '.icon');
+};
+
+const contactLinkHover = () => {
+  $(document).on({
+    mouseenter: e => {
+      const target = e.target.id;
+      console.error(target);
+      if (target === 'contact-phone') {
+        $('#icon-phone').addClass('link-hover-active');
+      } else if (target === 'contact-email') {
+        $('#icon-email').addClass('link-hover-active');
+      } else if (target === 'contact-github') {
+        $('#icon-github').addClass('link-hover-active');
+      } else if (target === 'contact-twitter') {
+        $('#icon-twitter').addClass('link-hover-active');
+      } else if (target === 'contact-linkedin') {
+        $('#icon-linkedin').addClass('link-hover-active');
+      }
+    },
+    mouseleave: () => {
+      $('#icon-phone').removeClass('link-hover-active');
+      $('#icon-email').removeClass('link-hover-active');
+      $('#icon-github').removeClass('link-hover-active');
+      $('#icon-twitter').removeClass('link-hover-active');
+      $('#icon-linkedin').removeClass('link-hover-active');
+    },
+  }, '#contact-links');
+};
+
 const bindEvents = () => {
   initialPageLoad();
   navHome();
@@ -82,6 +135,8 @@ const bindEvents = () => {
   navResume();
   navBlog();
   navContact();
+  contactHover();
+  contactLinkHover();
 };
 
 module.exports = {
