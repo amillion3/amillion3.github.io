@@ -74,6 +74,12 @@ const buildProjectString = inputProjects => {
   printToDom(output, '#container-projects');
 };
 
+// const buildPageArrays = inputBlogs => {
+//   // 00-09,
+//   // 10-19,
+//   // 20-29...
+// };
+
 const buildBlogString = inputBlogs => {
   let output = '<h2 class="text-center">Million\'s Musings</h2>';
   inputBlogs.forEach(blog => {
