@@ -102,10 +102,9 @@ const contactHover = () => {
 };
 
 const contactLinkHover = () => {
-  $(document).on({
+  $('#container-contact').on({
     mouseenter: e => {
       const target = e.target.id;
-      console.error(target);
       if (target === 'contact-phone') {
         $('#icon-phone').addClass('link-hover-active');
       } else if (target === 'contact-email') {
@@ -125,7 +124,7 @@ const contactLinkHover = () => {
       $('#icon-twitter').removeClass('link-hover-active');
       $('#icon-linkedin').removeClass('link-hover-active');
     },
-  }, '#contact-links');
+  }, '.contact-link');
 };
 
 const bindEvents = () => {

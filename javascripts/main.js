@@ -7,4 +7,4 @@ data.initializer();
 // TO DO
 // Figure out how to hide content behind the footer in regular view
 // 'Active' buttons/tabs for the page you are on
-// Do contact page
+// fix 'home' page links
