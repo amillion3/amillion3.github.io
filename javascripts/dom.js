@@ -1,3 +1,5 @@
+const blog = require ('./blog');
+
 const printToDom = (inputString, divId) => {
   $(divId).html(inputString);
 };
@@ -75,7 +77,7 @@ const buildProjectString = inputProjects => {
 
 const buildPageArrays = (inputBlogs, currentPage) => {
   const blogsToPrint = [];
-  const pageSize = 5; // 5 entries per page
+  const pageSize = blog.getBlogEntriesPerPage();
   inputBlogs.forEach((blog, i) => {
     if (i >= pageSize * (currentPage - 1) && i < pageSize * currentPage) {
       blogsToPrint.push(blog);
@@ -85,9 +87,8 @@ const buildPageArrays = (inputBlogs, currentPage) => {
 };
 
 const buildBlogString = (inputAllBlogs, currentPage) => {
-  const totalPages = (inputAllBlogs - (inputAllBlogs % 5)) / 5;
-  const inputBlogs = buildPageArrays(inputAllBlogs, currentPage);
-
+  // const totalPages = (inputAllBlogs - (inputAllBlogs % 5)) / 5;
+  const inputBlogs = buildPageArrays(inputAllBlogs, blog.getCurrentPage());
   let output = '<h2 class="text-center">Million\'s Musings</h2>';
   inputBlogs.forEach(blog => {
     output += `
@@ -111,16 +112,16 @@ const buildBlogString = (inputAllBlogs, currentPage) => {
   if (currentPage === 1) {
     output += `
       <li class="disabled" id='blog-pager-previous'><a href="#">Previous</a></li>
-      <li id='blog-pager-next'><a href="#">Next</a></li>`;
+      <li id='blog-pager-next' data-currentPage="${blog.getCurrentPage()}"><a href="#">Next</a></li>`;
   }
-  else if (currentPage === totalPages) {
+  else if (currentPage === blog.getTotalPages()) {
     output += `
-      <li id='blog-pager-previous'><a href="#">Previous</a></li>
+      <li id='blog-pager-previous' data-currentPage="${blog.getCurrentPage()}"><a href="#">Previous</a></li>
       <li class="disabled" id='blog-pager-next'><a href="#">Next</a></li>`;
   } else {
     output += `
-      <li id='blog-pager-previous'><a href="#">Previous</a></li>
-      <li id='blog-pager-next'><a href="#">Next</a></li>`;
+      <li id='blog-pager-previous' data-currentPage="${blog.getCurrentPage()}"><a href="#">Previous</a></li>
+      <li id='blog-pager-next' data-currentPage="${blog.getCurrentPage()}"><a href="#">Next</a></li>`;
   }
   output += `
     </ul>

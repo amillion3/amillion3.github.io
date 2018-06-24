@@ -1,5 +1,6 @@
 const firebaseApi = require('./firebaseApi');
 const dom = require ('./dom');
+const blog = require ('./blog');
 
 const initialPageLoad = () => {
   $('#container-home').removeClass('hide');
@@ -18,11 +19,25 @@ const callForProjects = () => {
 const callForBlogs = () => {
   firebaseApi.getAllBlogs()
     .then(allBlogsArray => {
-      dom.buildBlogString(allBlogsArray, 1);
+      dom.buildBlogString(allBlogsArray, blog.getCurrentPage());
     })
     .catch(err => {
       console.error('Error getting blogs, ', err);
     });
+};
+
+const blogPagerEvents = () => {
+  let p = 0;
+  $('#container-blog').on('click', e => {
+    console.error(e);
+    if (e.target.id === 'blog-pager-previous') {
+      p = e.target.dataset;
+      console.error('p ', p);
+    } else if (e.target.id === 'blog-pager-next') {
+      p = e.target.dataset;
+      console.error('p ', p);
+    }
+  });
 };
 
 // TO DO - pager events
@@ -137,6 +152,7 @@ const bindEvents = () => {
   contactHover();
   contactLinkHover();
   mobileNavItemClicked();
+  blogPagerEvents();
 };
 
 module.exports = {
