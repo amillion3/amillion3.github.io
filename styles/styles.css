@@ -67,6 +67,10 @@ h1 {
   letter-spacing: .1rem;
   text-align: center;
 }
+#navbar-mobile {
+  border: none;
+  outline: 0;
+}
 @media (max-width: 768px) {
   .navbar-default .navbar-nav>li>a {
     border-top: 1px solid #db0d59;
@@ -176,10 +180,11 @@ nav {
 .blog-entry-title {
   letter-spacing: .06rem;
 }
-.blog-single-entry {
-  border-top: 1px solid white;
+.blog-single-entry{
+  border-top: 3px solid #f09301;
   padding-top: 1rem;
 }
+
 /* -- end Container BLOG Styling */
 
 /* --------------- Contact Styling */

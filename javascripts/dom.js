@@ -92,7 +92,7 @@ const buildBlogString = (inputAllBlogs, currentPage) => {
   let output = '<h2 class="text-center">Million\'s Musings</h2>';
   inputBlogs.forEach(blog => {
     output += `
-    <div id='${blog.id}' class='row blog-entry col-xs-offset-1 col-xs-11'>
+    <div id='${blog.id}' class='row blog-entry'>
       <div class='blog-title'>
         <div class='text-left col-xs-6'>
           <h4 class='blog-entry-title'>${blog.title}</h4>
@@ -112,16 +112,16 @@ const buildBlogString = (inputAllBlogs, currentPage) => {
   if (currentPage === 1) {
     output += `
       <li class="disabled"><a href="#" id='blog-pager-previous'><span aria-hidden="true">&larr;</span> Older</a></li>
-      <li class=""><a href="#" id='blog-pager-next' data-currentPage="${blog.getCurrentPage()}">Newer...<span aria-hidden="true">&rarr;</span></a></li>`;
+      <li class="enabled"><a href="#" id='blog-pager-next' data-currentPage="${blog.getCurrentPage()}">Newer...<span aria-hidden="true">&rarr;</span></a></li>`;
   }
   else if (currentPage === blog.getTotalPages()) {
     output += `
-      <li class=""><a href="#" id='blog-pager-previous' data-currentPage="${blog.getCurrentPage()}"><span aria-hidden="true">&larr;</span>Older...</a></li>
+      <li class="enabled"><a href="#" id='blog-pager-previous' data-currentPage="${blog.getCurrentPage()}"><span aria-hidden="true">&larr;</span>Older...</a></li>
       <li class="disabled"><a href="#" id='blog-pager-next'>Newer<span aria-hidden="true">&rarr;</span></a></li>`;
   } else {
     output += `
-      <li class=""><a href="#" id='blog-pager-previous' data-currentPage="${blog.getCurrentPage()}"><span aria-hidden="true">&larr;</span>Older...</a></li>
-      <li class=""><a href="#" id='blog-pager-next' data-currentPage="${blog.getCurrentPage()}">Newer...<span aria-hidden="true">&rarr;</span></a></li>`;
+      <li class="enabled"><a href="#" id='blog-pager-previous' data-currentPage="${blog.getCurrentPage()}"><span aria-hidden="true">&larr;</span>Older...</a></li>
+      <li class="enabled"><a href="#" id='blog-pager-next' data-currentPage="${blog.getCurrentPage()}">Newer...<span aria-hidden="true">&rarr;</span></a></li>`;
   }
   output += `
     </ul>
