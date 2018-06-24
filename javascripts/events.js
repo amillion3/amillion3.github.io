@@ -1,5 +1,6 @@
 const firebaseApi = require('./firebaseApi');
 const dom = require ('./dom');
+const blog = require ('./blog');
 
 const initialPageLoad = () => {
   $('#container-home').removeClass('hide');
@@ -15,15 +16,47 @@ const callForProjects = () => {
     });
 };
 
+// Blog events start
 const callForBlogs = () => {
   firebaseApi.getAllBlogs()
     .then(allBlogsArray => {
-      dom.buildBlogString(allBlogsArray);
+      blog.setTotalPages(allBlogsArray.length);
+      return allBlogsArray;
+    })
+    .then (allBlogsArray => {
+      dom.buildBlogString(allBlogsArray, blog.getCurrentPage());
+      // $('html,body').scrollTop(0);
+
     })
     .catch(err => {
       console.error('Error getting blogs, ', err);
     });
 };
+const blogPagerEvents = () => {
+  let p = 0;
+  $('#container-blog').on('click', e => {
+    p = 1 * e.target.dataset.currentpage; // set to current page
+    if (e.target.id === 'blog-pager-previous') {
+      if (p > 0) {
+        blog.decreaseCurrentPage();
+        callForBlogs();
+        $('html, body').animate({
+          scrollTop: $('#container-blog').offset().top,
+        }, 2000);
+      }
+    } else if (e.target.id === 'blog-pager-next') {
+      if (p <= ((blog.getTotalPages() * 1) - 1)) {
+        blog.increaseCurrentPage();
+        callForBlogs();
+        $('html, body').animate({
+          scrollTop: $('#container-blog').offset().top,
+        }, 2000);
+      }
+    }
+  });
+};
+// end blog events
+
 //  Navbar click events
 const addHideToAllDivs = () => {
   $('#container-home').addClass('hide');
@@ -62,8 +95,27 @@ const navContact = () => {
   $('nav').on('click', '#nav-contact', e => {
     addHideToAllDivs();
     $('#container-contact').removeClass('hide');
+    // const jqWindow = $(window);
+    // const jqIcon = $('.icon');
+
+    // function resize () {
+    //   if (jqWindow.width() < 514) {
+    //     jqIcon.addClass('fa-2x');
+    //     jqIcon.removeClass('fa-4x');
+    //     $('#icon-phone').removeClass('fa-2x, fa-3x, fa-4x').addClass('fa-xs');
+    //   } else {
+    //     jqIcon.removeClass('fa-2x');
+    //     jqIcon.addClass('fa-4x');
+    //     $('#icon-phone').removeClass('fa-xs, fa-2x, fa-4x').addClass('fa-3x');
+    //   }
+    // }
+
+    // jqWindow
+    //   .resize(resize)
+    //   .trigger('resize');
   });
 };
+
 const mobileNavItemClicked = () => {
   $('.navbar-collapse a').click(() => {
     $('.navbar-collapse').collapse('hide');
@@ -134,6 +186,7 @@ const bindEvents = () => {
   contactHover();
   contactLinkHover();
   mobileNavItemClicked();
+  blogPagerEvents();
 };
 
 module.exports = {

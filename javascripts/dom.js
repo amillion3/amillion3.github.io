@@ -1,3 +1,4 @@
+const blog = require ('./blog');
 
 const printToDom = (inputString, divId) => {
   $(divId).html(inputString);
@@ -10,21 +11,21 @@ const buildIconStringForInsertion = input => {
     output += `<div class="panel-footer tech-icons text-center">`;
     icons.forEach(i => {
       if (i === 'browserify') {
-        output += `<img src='../img/icons/browserify.svg' class='tech-icon-svg' alt='Browserify logo'>`;
+        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/browserify.svg' class='tech-icon-svg' alt='Browserify logo'>`;
       } else if (i === 'css3') {
-        output += `<img src='../img/icons/css3.svg' class='tech-icon-svg' alt='CSS3 logo'>`;
+        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/css3.svg' class='tech-icon-svg' alt='CSS3 logo'>`;
       }  else if (i === 'es6') {
-        output += `<img src='../img/icons/es6.svg' class='tech-icon-svg' alt='JavaScript ES6 logo'>`;
+        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/es6.svg' class='tech-icon-svg' alt='JavaScript ES6 logo'>`;
       } else if (i === 'firebase') {
-        output += `<img src='../img/icons/firebase.svg' class='tech-icon-svg' alt='Firebase logo'>`;
+        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/firebase.svg' class='tech-icon-svg' alt='Firebase logo'>`;
       } else if (i === 'grunt') {
-        output += `<img src='../img/icons/grunt.svg' class='tech-icon-svg' alt='Grunt logo'>`;
+        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/grunt.svg' class='tech-icon-svg' alt='Grunt logo'>`;
       } else if (i === 'html5') {
-        output += `<img src='../img/icons/html5.svg' class='tech-icon-svg' alt='HTML5 logo'>`;
+        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/html5.svg' class='tech-icon-svg' alt='HTML5 logo'>`;
       } else if (i === 'jquery') {
-        output += `<img src='../img/icons/jquery.svg' class='tech-icon-svg' alt='jQuery logo'>`;
+        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/jquery.svg' class='tech-icon-svg' alt='jQuery logo'>`;
       } else if (i === 'node') {
-        output += `<img src='../img/icons/nodejs.svg' class='tech-icon-svg' alt='NodeJS logo'>`;
+        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/nodejs.svg' class='tech-icon-svg' alt='NodeJS logo'>`;
       }
     });
     output += `</div>`;
@@ -74,11 +75,24 @@ const buildProjectString = inputProjects => {
   printToDom(output, '#container-projects');
 };
 
-const buildBlogString = inputBlogs => {
+const buildPageArrays = (inputBlogs, currentPage) => {
+  const blogsToPrint = [];
+  const pageSize = blog.getBlogEntriesPerPage();
+  inputBlogs.forEach((blog, i) => {
+    if (i >= pageSize * (currentPage - 1) && i < pageSize * currentPage) {
+      blogsToPrint.push(blog);
+    }
+  });
+  return blogsToPrint;
+};
+
+const buildBlogString = (inputAllBlogs, currentPage) => {
+  // const totalPages = (inputAllBlogs - (inputAllBlogs % 5)) / 5;
+  const inputBlogs = buildPageArrays(inputAllBlogs, blog.getCurrentPage());
   let output = '<h2 class="text-center">Million\'s Musings</h2>';
   inputBlogs.forEach(blog => {
     output += `
-    <div id='${blog.id}' class='row blog-entry col-xs-offset-1 col-xs-11'>
+    <div id='${blog.id}' class='row blog-entry'>
       <div class='blog-title'>
         <div class='text-left col-xs-6'>
           <h4 class='blog-entry-title'>${blog.title}</h4>
@@ -92,6 +106,26 @@ const buildBlogString = inputBlogs => {
       </div>
     </div>`;
   });
+  output += `
+  <nav aria-label="blog-pager">
+    <ul class="pager">`;
+  if (currentPage === 1) {
+    output += `
+      <li class="disabled"><a href="#" id='blog-pager-previous'><span aria-hidden="true">&larr;</span> Older</a></li>
+      <li class="enabled"><a href="#" id='blog-pager-next' data-currentPage="${blog.getCurrentPage()}">Newer...<span aria-hidden="true">&rarr;</span></a></li>`;
+  }
+  else if (currentPage === blog.getTotalPages()) {
+    output += `
+      <li class="enabled"><a href="#" id='blog-pager-previous' data-currentPage="${blog.getCurrentPage()}"><span aria-hidden="true">&larr;</span>Older...</a></li>
+      <li class="disabled"><a href="#" id='blog-pager-next'>Newer<span aria-hidden="true">&rarr;</span></a></li>`;
+  } else {
+    output += `
+      <li class="enabled"><a href="#" id='blog-pager-previous' data-currentPage="${blog.getCurrentPage()}"><span aria-hidden="true">&larr;</span>Older...</a></li>
+      <li class="enabled"><a href="#" id='blog-pager-next' data-currentPage="${blog.getCurrentPage()}">Newer...<span aria-hidden="true">&rarr;</span></a></li>`;
+  }
+  output += `
+    </ul>
+  </nav>`;
   printToDom(output, '#container-blog');
 };
 
