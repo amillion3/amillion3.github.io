@@ -1,3 +1,4 @@
+const pagination = require('./pagination/jquery.simplePagination');
 
 const printToDom = (inputString, divId) => {
   $(divId).html(inputString);
@@ -10,21 +11,21 @@ const buildIconStringForInsertion = input => {
     output += `<div class="panel-footer tech-icons text-center">`;
     icons.forEach(i => {
       if (i === 'browserify') {
-        output += `<img src='../img/icons/browserify.svg' class='tech-icon-svg' alt='Browserify logo'>`;
+        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/browserify.svg' class='tech-icon-svg' alt='Browserify logo'>`;
       } else if (i === 'css3') {
-        output += `<img src='../img/icons/css3.svg' class='tech-icon-svg' alt='CSS3 logo'>`;
+        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/css3.svg' class='tech-icon-svg' alt='CSS3 logo'>`;
       }  else if (i === 'es6') {
-        output += `<img src='../img/icons/es6.svg' class='tech-icon-svg' alt='JavaScript ES6 logo'>`;
+        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/es6.svg' class='tech-icon-svg' alt='JavaScript ES6 logo'>`;
       } else if (i === 'firebase') {
-        output += `<img src='../img/icons/firebase.svg' class='tech-icon-svg' alt='Firebase logo'>`;
+        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/firebase.svg' class='tech-icon-svg' alt='Firebase logo'>`;
       } else if (i === 'grunt') {
-        output += `<img src='../img/icons/grunt.svg' class='tech-icon-svg' alt='Grunt logo'>`;
+        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/grunt.svg' class='tech-icon-svg' alt='Grunt logo'>`;
       } else if (i === 'html5') {
-        output += `<img src='../img/icons/html5.svg' class='tech-icon-svg' alt='HTML5 logo'>`;
+        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/html5.svg' class='tech-icon-svg' alt='HTML5 logo'>`;
       } else if (i === 'jquery') {
-        output += `<img src='../img/icons/jquery.svg' class='tech-icon-svg' alt='jQuery logo'>`;
+        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/jquery.svg' class='tech-icon-svg' alt='jQuery logo'>`;
       } else if (i === 'node') {
-        output += `<img src='../img/icons/nodejs.svg' class='tech-icon-svg' alt='NodeJS logo'>`;
+        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/nodejs.svg' class='tech-icon-svg' alt='NodeJS logo'>`;
       }
     });
     output += `</div>`;
@@ -74,14 +75,33 @@ const buildProjectString = inputProjects => {
   printToDom(output, '#container-projects');
 };
 
-// const buildPageArrays = inputBlogs => {
-//   // 00-09,
-//   // 10-19,
-//   // 20-29...
-// };
+const buildPageArrays = (inputBlogs, currentPage) => {
+  const blogsToPrint = [];
+  // console.error(inputBlogs.length);
+  // const pageCount = inputBlogs.length % 5;
+  // console.error(inputBlogs.length % 5);
+  $(() => {
+    $('#container-blog').pagination({
+      items: 16,
+      itemsOnPage: 5,
+    });
+  });
+  // const inputLength = inputBlogs.length;
+  // const pageCount = (inputLength - (inputLength % 5)) / 5; // how many pages
+  // console.error(pageCount);
+  // inputBlogs.forEach((blog, index) => {
+  //   blog.page = index;
+  //   if (currentPage <= (index * pageCount) + 5) {
 
-const buildBlogString = inputBlogs => {
+  //     blogsToPrint.push(blog);
+  //   }
+  // });
+  return blogsToPrint;
+};
+
+const buildBlogString = (inputAllBlogs, currentPage) => {
   let output = '<h2 class="text-center">Million\'s Musings</h2>';
+  const inputBlogs = buildPageArrays(inputAllBlogs, currentPage);
   inputBlogs.forEach(blog => {
     output += `
     <div id='${blog.id}' class='row blog-entry col-xs-offset-1 col-xs-11'>

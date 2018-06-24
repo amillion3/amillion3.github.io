@@ -18,7 +18,7 @@ const callForProjects = () => {
 const callForBlogs = () => {
   firebaseApi.getAllBlogs()
     .then(allBlogsArray => {
-      dom.buildBlogString(allBlogsArray);
+      dom.buildBlogString(allBlogsArray, 1);
     })
     .catch(err => {
       console.error('Error getting blogs, ', err);

@@ -5,7 +5,7 @@ body {
   box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif;
   color: #F8F8FF;
-  background-image: url('../img/backgroundimage/uCw9VpO_cropped-767px.png');
+  background-image: url('https://www.andymillion.com/personal-portfolio/background/uCw9VpO_cropped-767px.png');
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -271,7 +271,7 @@ a .icon:hover {
 /* Small devices (tablets, 768px and up) */
 @media all and (min-width: 768px) {
   body {
-    background-image: url('../img/backgroundimage/uCw9VpO_cropped-991px.png');
+    background-image: url('https://www.andymillion.com/personal-portfolio/background/uCw9VpO_cropped-991px.png');
     background-size: 55%;
     padding: 0 0 22rem 0;
   }
@@ -291,7 +291,7 @@ a .icon:hover {
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   body {
-    background-image: url('../img/backgroundimage/uCw9VpO_cropped.png');
+    background-image: url('https://www.andymillion.com/personal-portfolio/background/uCw9VpO_cropped.png');
     background-size: 55%;
     padding: 0 0 20rem 0;
     /* The above gives space at bottom for graphic */
@@ -306,7 +306,7 @@ a .icon:hover {
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   body {
-    background-image: url('../img/backgroundimage/uCw9VpO_cropped.png');
+    background-image: url('https://www.andymillion.com/personal-portfolio/background/uCw9VpO_cropped.png');
     background-size: 35%;
     padding: 0 0 30rem 0;
     /* The above gives space at bottom for graphic */
