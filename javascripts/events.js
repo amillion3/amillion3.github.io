@@ -24,6 +24,9 @@ const callForBlogs = () => {
       console.error('Error getting blogs, ', err);
     });
 };
+
+// TO DO - pager events
+
 //  Navbar click events
 const addHideToAllDivs = () => {
   $('#container-home').addClass('hide');

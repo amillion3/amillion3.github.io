@@ -1,5 +1,3 @@
-const pagination = require('./pagination/jquery.simplePagination');
-
 const printToDom = (inputString, divId) => {
   $(divId).html(inputString);
 };
@@ -77,31 +75,20 @@ const buildProjectString = inputProjects => {
 
 const buildPageArrays = (inputBlogs, currentPage) => {
   const blogsToPrint = [];
-  // console.error(inputBlogs.length);
-  // const pageCount = inputBlogs.length % 5;
-  // console.error(inputBlogs.length % 5);
-  $(() => {
-    $('#container-blog').pagination({
-      items: 16,
-      itemsOnPage: 5,
-    });
+  const pageSize = 5; // 5 entries per page
+  inputBlogs.forEach((blog, i) => {
+    if (i >= pageSize * (currentPage - 1) && i < pageSize * currentPage) {
+      blogsToPrint.push(blog);
+    }
   });
-  // const inputLength = inputBlogs.length;
-  // const pageCount = (inputLength - (inputLength % 5)) / 5; // how many pages
-  // console.error(pageCount);
-  // inputBlogs.forEach((blog, index) => {
-  //   blog.page = index;
-  //   if (currentPage <= (index * pageCount) + 5) {
-
-  //     blogsToPrint.push(blog);
-  //   }
-  // });
   return blogsToPrint;
 };
 
 const buildBlogString = (inputAllBlogs, currentPage) => {
-  let output = '<h2 class="text-center">Million\'s Musings</h2>';
+  const totalPages = (inputAllBlogs - (inputAllBlogs % 5)) / 5;
   const inputBlogs = buildPageArrays(inputAllBlogs, currentPage);
+
+  let output = '<h2 class="text-center">Million\'s Musings</h2>';
   inputBlogs.forEach(blog => {
     output += `
     <div id='${blog.id}' class='row blog-entry col-xs-offset-1 col-xs-11'>
@@ -118,6 +105,26 @@ const buildBlogString = (inputAllBlogs, currentPage) => {
       </div>
     </div>`;
   });
+  output += `
+  <nav aria-label="blog-pager">
+    <ul class="pager">`;
+  if (currentPage === 1) {
+    output += `
+      <li class="disabled" id='blog-pager-previous'><a href="#">Previous</a></li>
+      <li id='blog-pager-next'><a href="#">Next</a></li>`;
+  }
+  else if (currentPage === totalPages) {
+    output += `
+      <li id='blog-pager-previous'><a href="#">Previous</a></li>
+      <li class="disabled" id='blog-pager-next'><a href="#">Next</a></li>`;
+  } else {
+    output += `
+      <li id='blog-pager-previous'><a href="#">Previous</a></li>
+      <li id='blog-pager-next'><a href="#">Next</a></li>`;
+  }
+  output += `
+    </ul>
+  </nav>`;
   printToDom(output, '#container-blog');
 };
 
