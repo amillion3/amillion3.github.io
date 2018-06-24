@@ -19,6 +19,10 @@ const callForProjects = () => {
 const callForBlogs = () => {
   firebaseApi.getAllBlogs()
     .then(allBlogsArray => {
+      blog.setTotalPages(allBlogsArray.length);
+      return allBlogsArray;
+    })
+    .then (allBlogsArray => {
       dom.buildBlogString(allBlogsArray, blog.getCurrentPage());
     })
     .catch(err => {
@@ -29,18 +33,20 @@ const callForBlogs = () => {
 const blogPagerEvents = () => {
   let p = 0;
   $('#container-blog').on('click', e => {
-    console.error(e);
+    p = 1 * e.target.dataset.currentpage; // set to current page
     if (e.target.id === 'blog-pager-previous') {
-      p = e.target.dataset;
-      console.error('p ', p);
+      if (p > 0) {
+        blog.decreaseCurrentPage();
+        callForBlogs();
+      }
     } else if (e.target.id === 'blog-pager-next') {
-      p = e.target.dataset;
-      console.error('p ', p);
+      if (p <= ((blog.getTotalPages() * 1) - 1)) {
+        blog.increaseCurrentPage();
+        callForBlogs();
+      }
     }
   });
 };
-
-// TO DO - pager events
 
 //  Navbar click events
 const addHideToAllDivs = () => {

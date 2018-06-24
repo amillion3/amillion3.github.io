@@ -1,4 +1,4 @@
-let currentPage = 0;
+let currentPage = 1;
 const blogEntriesPerPage = 5;
 let totalPages = 1;
 
@@ -14,15 +14,17 @@ const getCurrentPage = () => currentPage;
 
 const getBlogEntriesPerPage = () => blogEntriesPerPage;
 
-const getTotalPages = blogLength => {
+const getTotalPages = () => totalPages;
+
+const setTotalPages = blogLength => {
   totalPages = (blogLength - (blogLength % blogEntriesPerPage)) / blogEntriesPerPage;
-  return totalPages;
 };
 
 module.exports = {
   getCurrentPage,
   getBlogEntriesPerPage,
   getTotalPages,
+  setTotalPages,
   increaseCurrentPage,
   decreaseCurrentPage,
 };

@@ -111,17 +111,17 @@ const buildBlogString = (inputAllBlogs, currentPage) => {
     <ul class="pager">`;
   if (currentPage === 1) {
     output += `
-      <li class="disabled" id='blog-pager-previous'><a href="#">Previous</a></li>
-      <li id='blog-pager-next' data-currentPage="${blog.getCurrentPage()}"><a href="#">Next</a></li>`;
+      <li class="disabled"><a href="#" id='blog-pager-previous'>Previous</a></li>
+      <li><a href="#" id='blog-pager-next' data-currentPage="${blog.getCurrentPage()}">Next</a></li>`;
   }
   else if (currentPage === blog.getTotalPages()) {
     output += `
-      <li id='blog-pager-previous' data-currentPage="${blog.getCurrentPage()}"><a href="#">Previous</a></li>
-      <li class="disabled" id='blog-pager-next'><a href="#">Next</a></li>`;
+      <li><a href="#" id='blog-pager-previous' data-currentPage="${blog.getCurrentPage()}">Previous</a></li>
+      <li class="disabled"><a href="#" id='blog-pager-next'>Next</a></li>`;
   } else {
     output += `
-      <li id='blog-pager-previous' data-currentPage="${blog.getCurrentPage()}"><a href="#">Previous</a></li>
-      <li id='blog-pager-next' data-currentPage="${blog.getCurrentPage()}"><a href="#">Next</a></li>`;
+      <li><a href="#" id='blog-pager-previous' data-currentPage="${blog.getCurrentPage()}">Previous</a></li>
+      <li><a href="#" id='blog-pager-next' data-currentPage="${blog.getCurrentPage()}">Next</a></li>`;
   }
   output += `
     </ul>
