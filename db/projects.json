@@ -1,46 +1,62 @@
 {
-  "projects": [
-    {
-      "id": "project1",
-      "title": "Elephant",
-      "imageURL": "./img/1.jpg",
-      "description": "Wow. Ben Franklin, you're really kind of a sleazebag. I don't talk trash, I talk smack. They're totally different. I never smile if I can help it, Showing one's teeth is a submission signal in primates. Someone smiles at me, all I see is a chimpanzee begging for its life.",
-      "githubURL": ""
-    },
-    {
-      "id": "project2",
-      "title": "Duckling",
-      "imageURL": "./img/2.jpg",
-      "description": "Dwight you ignorant slut. Sometimes you just have to be the boss of dancing. Saddle shoes with denim? I will literally call Protective Services. I DECLARE BANKRUPTCY! In an ideal world I would have all ten fingers on my left hand and the right one would just be left for punching.",
-      "githubURL": ""
-    },
-    {
-      "id": "project3",
-      "title": "Hedgehog",
-      "imageURL": "./img/3.jpg",
-      "description": "Crazy world. Lotta smells. I'll be the Number Two guy here in Scranton in six weeks. How? Name repetition, personality mirroring, and never breaking off a handshake. I'm always thinking one step ahead. Like a carpenter that makes stairs. DID I STUTTER?",
-      "githubURL": ""
-    },
-    {
-      "id": "project4",
-      "title": "Panda",
-      "imageURL": "./img/4.jpg",
-      "description": "What is wrong with these people? They have no willpower. I went -- I once went 28 years without having sex. And then again for seven years. I don't understand the desire to push sweet potato fries on me. I just want regular fries. Oh God, my mind is going a mile an hour.",
-      "githubURL": ""
-    },
-    {
-      "id": "project5",
-      "title": "Sloth",
-      "imageURL": "./img/5.jpg",
-      "description": "If I had a gun with two bullets and I was in a room with Hitler, Bin Laden, and Toby, I would shoot Toby twice. Just pretend like we're talking until the cops leave. Dwight you ignorant slut. I love catching people in the act. That's why I always whip open doors.",
-      "githubURL": ""
-    },
-    {
-      "id": "project1",
-      "title": "Fox",
-      "imageURL": "./img/6.jpg",
-      "description": "There is no such thing as an appropriate joke, that's why it's a joke. You couldn't handle my undivided attention. Every word out of your mouth is like the squawk of an ugly pelican. I feel God in this Chili's. I sprout mung beans on a damp paper towel in my desk drawer. Very nutritious. But they smell like death.",
-      "githubURL": ""
-    }
-  ]
+  "one": {
+    "projectId": 1,
+    "title": "Local Weather",
+    "imageURL": "https://www.andymillion.com/personal-portfolio/thumbnails/local-weather.png",
+    "description": "This app will display weather based on a zipcode the user inputs. The user must register before having access to this app. Data is stored and retrieved from Firebase and will be formatted and displayed on the screen for the user to see. The user can see today's weather or switch to a 5-day forecast.",
+    "techIcons": ["grunt","browserify","node","es6", "jquery","firebase", "css3","html5"],
+    "isLive": true,
+    "githubURL": "https://github.com/amillion3/local-weather",
+    "liveDemoURL": "https://local-weather.andymillion.com/"
+  },
+  "two": {
+    "projectId": 2,
+    "title": "Ex-Tracker",
+    "imageURL": "https://www.andymillion.com/personal-portfolio/thumbnails/ex-tracker.png",
+    "description": "This app is used to track my fictional 'exs'. The user is able to search for names or addresses (such as 'Chic-Fil-A' or '6500 Charlotte Pike') via a search box. The user can also filter by the time of day my ex usually frequents those locations. Using jQuery over vanilla JavaScript, the functionality is basic, but important.",
+    "techIcons": ["grunt","browserify","node","es6", "jquery","firebase", "css3","html5"],
+    "isLive": true,
+    "githubURL": "https://github.com/amillion3/ex-tracker",
+    "liveDemoURL": "https://ex-tracker.andymillion.com/"
+  },
+  "three": {
+    "projectId": 3,
+    "title": "Nutshell",
+    "imageURL": "https://www.andymillion.com/personal-portfolio/thumbnails/nutshell.png",
+    "description": "Group Project. We had 7 days to create a Facebook-like, single page app. Using Firebase, we had to setup authentication, specifically, register and login functionality. Logged in users can use these 5 modules with full CRUD capabilities: messaging, events, tasking, friends, and articles. This is light on the styling, but heavy on the concepts and teamwork.",
+    "techIcons": ["grunt","browserify","node","es6", "jquery","firebase", "css3","html5"],
+    "isLive": true,
+    "githubURL": "https://github.com/amillion3/nutshell-adobe-bricks",
+    "liveDemoURL": "https://nutshell-df075.firebaseapp.com/"
+  },
+  "four": {
+    "projectId": 4,
+    "title": "jQuery Calculator",
+    "imageURL": "https://www.andymillion.com/personal-portfolio/thumbnails/jquery-calculator.png",
+    "description": "The goal of building this calculator was to work with jQuery and manipulate the DOM. As well, the logic behind building a calculator is quite complex and took some work to figure out. In the end, the user is able to string multiple operations together. However, the calculator is not smart enough to factor in order of operations.",
+    "techIcons": ["grunt","browserify","node","es6", "jquery", "css3","html5"],
+    "isLive": true,
+    "githubURL": "https://github.com/amillion3/jquery-calculator",
+    "liveDemoURL": "https://jquery-calculator.firebaseapp.com/"
+  },
+  "five": {
+    "projectId": 5,
+    "title": "Movie Maker",
+    "imageURL": "https://www.andymillion.com/personal-portfolio/thumbnails/movie-maker.png",
+    "description": "This project aimed to use NodeJS, Grunt and Browserify in a more complex manner. This app allows a user to enter in a movie budget and then add different movie elements to their movie. Each movie element costs a certain amount of money. If the user goes over budget, they cannot make the movie. If the user does not include one movie element from each category, they cannot make the movie. Styling was kept fairly simple on this app, the focus was on functionality.",
+    "techIcons": ["grunt","browserify","node","es6", "css3","html5"],
+    "isLive": false,
+    "githubURL": "https://github.com/amillion3/movie-maker",
+    "liveDemoURL": ""
+  },
+  "six": {
+    "projectId": 6,
+    "title": "Solar System",
+    "imageURL": "https://www.andymillion.com/personal-portfolio/thumbnails/solar-system.png",
+    "description": "This single page app is a brief look at our solar system. Using information sourced from Wikipedia, this page was to demonstrate our ability to call and process XHRs from local JSON files.",
+    "techIcons": ["es6", "css3","html5"],
+    "isLive": false,
+    "githubURL": "https://github.com/amillion3/solar-system",
+    "liveDemoURL": ""
+  }
 }

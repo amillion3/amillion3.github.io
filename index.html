@@ -1,31 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Andy Million Portfolio</title>
-        <link rel="stylesheet" href="main.css">
-    </head>
-    <body>
-        <nav>
-            <div>
-                <h1>Andy Million</h1>
-                <ul class='navbar-container'>
-                    <li><a href = 'index.html'>Home</a></li>
-                    <li><a href = 'resume.html'>Resume</a></li>
-                    <li><a href = 'projects.html'>Projects</a></li>
-                    <li><a href = 'blogs.html'>Blog</a></li>
-                    <li><a href = 'contact.html'>Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!-- Begin Content Here -->
-        <div class="primary-container">
-            <header>
-                <h3>Personal Portfolio</h3>
-            </header>
-            <footer>
-                <p>&copy;	 Andy Million 2018</p>
-            </footer>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Andy Million | Portfolio</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div id="navbar-mobile" class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a id="nav-brand" class="navbar-brand" href="#">Andy <strong>Million</strong></a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right" id='navbar-desktop'>
+          <li><a id="nav-home" class="" href="#">Home</a></li>
+          <li><a id="nav-projects" class="" href="#">Projects</a></li>
+          <li><a id="nav-resume" class="" href="#">Resume</a></li>
+          <li><a id="nav-blog" class="" href="#">Blog</a></li>
+          <li><a id="nav-contact" class="" href="#">Contact</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <div class="" id="scroll-it">
+    <!-- Projects, resume, blog, contact will all need to be hidden -->
+    <section id="container-home" class="hide">
+        <!-- <h1 class="text-center">Andy Million</h1> -->
+        <div id="" class="row col-xs-offset-1 col-xs-10 text-center">
+          <img class="img-personal-photo" src="https://www.andymillion.com/personal-portfolio/profile.jpg" alt="Andy Million Personal Photo"/>
         </div>
-    </body>
+        <div id="personal-bio" class="row col-xs-offset-2 col-xs-8">
+          <p>My name is Andy Million and I am an aspiring full-stack web developer. I have a strong interest in mapping and related data. I have spent the past decade working with geospatial technologies, from a non-profit to a Department of Defense contractor. </p>
+          <p>I was first turned onto web development while trying to make a custom web map using Leaflet. It was so satisfying to have a working product and I enjoyed it much more than I thought I would. I find my heavy familiarity with technology and attention to detail are very helpful solving complex problems in web development.</p>
+          <p>In my spare time, I am the father of a fiercely independent, but amazing little girl. My wife and I enjoy traveling, hiking, and spending time together. I enjoy rock climbing, mountain biking, backpacking, and most outdoor activities. I also enjoy motorcycle racing, craft beer, music, and technology.</p>
+        </div>
+      </section>
+
+      <section id="outer-container-projects" class="hide">
+        <h2 class="text-center">Projects</h2>
+        <div id="container-projects" class="row col-xs-offset-0 col-xs-12 col-md-offset-1 col-md-10"></div>
+      </section>
+
+      <section id="container-resume" class="hide">
+        <h1 class="text-center resume-header">Professional Resume</h1>
+        <h2 class='text-center resume-header-2'>Work History</h2>
+        <div class='row col-xs-offset-0 col-xs-12 col-md-offset-1 col-md-10' id='resume-jobs'>
+          <div class='col-xs-12 col-md-4'>
+            <article id="" class="article-job">
+              <h3 class="text-center">Lidar Technician/QC Lead</h3>
+              <h4 class="text-center resume-company"><em>Wiser Consultants</em></h4>
+              <ul>
+                <li>High quality feature extraction of transportation corridors and associated features (utilities, buildings, lane markings, etc.) using Lidar data (aerial, mobile and terrestrial).</li>
+                <li>Solving complex problems with CAD, GIS, or scripting-based solutions.</li>
+                <li>Using CAD software such as Microstation/TopoDOT to run automated QC tools and ensure strict data tolerances (vertical and horizontal accuracy of 0.10 feet) are met.</li>
+                <li>Quality Control of feature collections,  identifying areas in need of update and coordinating with field crews.</li>
+              </ul>
+            </article>
+          </div>
+          <div class='col-xs-12 col-md-4'>
+            <article id="" class="article-job">
+              <h3 class="text-center">Senior Geospatial Analyst</h3>
+              <h4 class="text-center resume-company"><em>Wiser Imagery</em></h4>
+              <ul>
+                <li>Compiling geographic feature data from 2D and 3D imagery sources following detailed feature extraction guidelines (UFD/UTDS, MGCP, TPC).</li>
+                <li>Performing digital feature extraction from raster, vector and other ancillary sources at a variety of scales (1:5K to 1:500K).</li>
+                <li>Python scripting to automate tasks and collecting open source data through APIs and web scraping.</li>
+                <li>Performing automated attribution and topological checks and cleaning errors as needed.</li>
+              </ul>
+            </article>
+          </div>
+          <div class='col-xs-12 col-md-4'>
+            <article id="" class="article-job">
+              <h3 class="text-center">GIS Specialist</h3>
+              <h4 class="text-center resume-company"><em>Western Land Services</em></h4>
+              <ul>
+                <li>Mapping oil and gas leases throughout the United States using parcel data.</li>
+                <li>Creating high quality paper and electronic maps for managers and clients.</li>
+                <li>Digitizing parcel boundaries and joining with tax assessment data.</li>
+                <li>Acquired, stored and served raster datasets for our department's use.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+        <div class='row col-xs-10 col-xs-offset-1 col-md-offset-2 col-md-8' id='resume-jobs'>
+          <h2 class='text-center resume-header-2'>Education</h2>
+          <div class='col-xs-12 col-md-6'>
+            <h3 class="text-left">Full Stack Web Developer Bootcamp</h3>
+            <h4 class="text-left"><em>Nashville Software School 2018-2019</em></h4>
+          </div>
+          <div class='col-xs-12 col-md-6'>
+            <h3 class="text-left">Bachelor of Science in Geography</h3>
+            <h4 class="text-left"><em>Grand Valley State University 2002-06</em></h4>
+          </div>
+        </div>
+      </section>
+
+      <section id="container-blog" class="hide col-xs-offset-1 col-xs-11 col-md-offset-2 col-md-8">
+
+      </section>
+      <section id="container-contact" class="hide">
+        <header>
+          <h1 class="text-center">Contact Me</h1>
+          <h4 class="text-center">Feel free to contact me whichever way is most convenient for you.</h4>
+        </header>
+        <div class="row">
+          <div id="contact-me" class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-12 text-center contact-details">
+            <i class="icon fas fa-phone fa-3x" id='icon-phone'></i>
+            <a href="mailto:andrew.j.million@gmail.com" target="_blank"><i class="icon far fa-envelope fa-4x" id='icon-email'></i></a>
+            <a href="https://github.com/amillion3" target="_blank"><i class="icon fab fa-github fa-4x" id="icon-github"></i></a>
+            <a href="https://twitter.com/amillion3" target="_blank"><i class="icon fab fa-twitter fa-4x" id="icon-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/andrewmillion/" target="_blank"><i class="icon fab fa-linkedin-in fa-4x" id="icon-linkedin"></i></a>
+          </div>
+          <div class="col-xs-12 text-center">
+            <p id="contact-phone" class="contact-link">(615) 542-3849</p>
+            <a href="mailto:andrew.j.million@gmail.com" target="_blank" class=""><p id="contact-email" class="contact-link">andrew.j.million@gmail.com</p></a>
+            <a href="https://github.com/amillion3" target="_blank" class=""><p id="contact-github" class="contact-link">github.com/amillion3</p></a>
+            <a href="https://twitter.com/amillion3" target="_blank" class=""><p id="contact-twitter" class="contact-link">@amillion3</p></a>
+            <a href="https://www.linkedin.com/in/andrewmillion/" target="_blank" class=""><p id="contact-linkedin" class="contact-link">linkedin.com/in/andrewmillion</p></a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+  <footer>
+    <div class='container-fluid navbar-fixed-bottom'>
+        <div class="row">
+          <div class="text-right footer-icons fa-lg col-sm-12">
+            <a href="mailto:andrew.j.million@gmail.com" target="_blank"><i class="far fa-envelope fa-lg"></i></a>
+            <a href="https://github.com/amillion3" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+            <a href="https://twitter.com/amillion3" target="_blank"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/andrewmillion/" target="_blank"><i class="fab fa-linkedin-in fa-lg"></i></a>
+          </div>
+        </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+  <script src="dist/app.js"></script>
+</body>
 </html>
