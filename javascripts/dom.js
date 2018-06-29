@@ -86,6 +86,14 @@ const buildPageArrays = (inputBlogs, currentPage) => {
   return blogsToPrint;
 };
 
+const blogParagraphsForInsertion = blog => {
+  let output = '';
+  blog.forEach(paragraph => {
+    output += `<p>${paragraph}</p>`;
+  });
+  return output;
+};
+
 const buildBlogString = (inputAllBlogs, currentPage) => {
   // const totalPages = (inputAllBlogs - (inputAllBlogs % 5)) / 5;
   const inputBlogs = buildPageArrays(inputAllBlogs, blog.getCurrentPage());
@@ -97,12 +105,12 @@ const buildBlogString = (inputAllBlogs, currentPage) => {
         <div class='text-left col-xs-6'>
           <h4 class='blog-entry-title'>${blog.title}</h4>
         </div>
-        <div class='text-right col-xs-6'>
+        <div class='text-right col-xs-6 blog-entry-date'>
           <h5><em>${blog.date}</em></h5>
         </div>
       </div>
       <div class='row col-xs-12 blog-single-entry'>
-        <p>${blog.post}</p>
+        ${blogParagraphsForInsertion(blog.post)}
       </div>
     </div>`;
   });
@@ -111,17 +119,17 @@ const buildBlogString = (inputAllBlogs, currentPage) => {
     <ul class="pager">`;
   if (currentPage === 1) {
     output += `
-      <li class="disabled"><a href="#" id='blog-pager-previous'><span aria-hidden="true">&larr;</span> Older</a></li>
-      <li class="enabled"><a href="#" id='blog-pager-next' data-currentPage="${blog.getCurrentPage()}">Newer...<span aria-hidden="true">&rarr;</span></a></li>`;
+      <li class="disabled"><a href="#" id='blog-pager-previous'><span aria-hidden="true">&larr;</span> Newer</a></li>
+      <li class="enabled"><a href="#" id='blog-pager-next' data-currentPage="${blog.getCurrentPage()}">Older...<span aria-hidden="true">&rarr;</span></a></li>`;
   }
   else if (currentPage === blog.getTotalPages()) {
     output += `
-      <li class="enabled"><a href="#" id='blog-pager-previous' data-currentPage="${blog.getCurrentPage()}"><span aria-hidden="true">&larr;</span>Older...</a></li>
-      <li class="disabled"><a href="#" id='blog-pager-next'>Newer<span aria-hidden="true">&rarr;</span></a></li>`;
+      <li class="enabled"><a href="#" id='blog-pager-previous' data-currentPage="${blog.getCurrentPage()}"><span aria-hidden="true">&larr;</span>Newer...</a></li>
+      <li class="disabled"><a href="#" id='blog-pager-next'>Older<span aria-hidden="true">&rarr;</span></a></li>`;
   } else {
     output += `
-      <li class="enabled"><a href="#" id='blog-pager-previous' data-currentPage="${blog.getCurrentPage()}"><span aria-hidden="true">&larr;</span>Older...</a></li>
-      <li class="enabled"><a href="#" id='blog-pager-next' data-currentPage="${blog.getCurrentPage()}">Newer...<span aria-hidden="true">&rarr;</span></a></li>`;
+      <li class="enabled"><a href="#" id='blog-pager-previous' data-currentPage="${blog.getCurrentPage()}"><span aria-hidden="true">&larr;</span>Newer...</a></li>
+      <li class="enabled"><a href="#" id='blog-pager-next' data-currentPage="${blog.getCurrentPage()}">Older...<span aria-hidden="true">&rarr;</span></a></li>`;
   }
   output += `
     </ul>

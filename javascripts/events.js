@@ -25,7 +25,6 @@ const callForBlogs = () => {
     })
     .then (allBlogsArray => {
       dom.buildBlogString(allBlogsArray, blog.getCurrentPage());
-      // $('html,body').scrollTop(0);
 
     })
     .catch(err => {
@@ -95,24 +94,6 @@ const navContact = () => {
   $('nav').on('click', '#nav-contact', e => {
     addHideToAllDivs();
     $('#container-contact').removeClass('hide');
-    // const jqWindow = $(window);
-    // const jqIcon = $('.icon');
-
-    // function resize () {
-    //   if (jqWindow.width() < 514) {
-    //     jqIcon.addClass('fa-2x');
-    //     jqIcon.removeClass('fa-4x');
-    //     $('#icon-phone').removeClass('fa-2x, fa-3x, fa-4x').addClass('fa-xs');
-    //   } else {
-    //     jqIcon.removeClass('fa-2x');
-    //     jqIcon.addClass('fa-4x');
-    //     $('#icon-phone').removeClass('fa-xs, fa-2x, fa-4x').addClass('fa-3x');
-    //   }
-    // }
-
-    // jqWindow
-    //   .resize(resize)
-    //   .trigger('resize');
   });
 };
 

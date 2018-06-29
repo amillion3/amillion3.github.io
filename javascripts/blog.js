@@ -17,7 +17,7 @@ const getBlogEntriesPerPage = () => blogEntriesPerPage;
 const getTotalPages = () => totalPages;
 
 const setTotalPages = blogLength => {
-  totalPages = (blogLength - (blogLength % blogEntriesPerPage)) / blogEntriesPerPage;
+  totalPages = Math.ceil(blogLength / blogEntriesPerPage);
 };
 
 module.exports = {
