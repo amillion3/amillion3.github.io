@@ -11,21 +11,21 @@ const buildIconStringForInsertion = input => {
     output += `<div class="panel-footer tech-icons text-center">`;
     icons.forEach(i => {
       if (i === 'browserify') {
-        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/browserify.svg' class='tech-icon-svg' alt='Browserify logo'>`;
+        output += `<img src='https://www.sandersbroscoffee.com/personal-portfolio/icons/browserify.svg' class='tech-icon-svg' alt='Browserify logo'>`;
       } else if (i === 'css3') {
-        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/css3.svg' class='tech-icon-svg' alt='CSS3 logo'>`;
+        output += `<img src='https://www.sandersbroscoffee.com/personal-portfolio/icons/css3.svg' class='tech-icon-svg' alt='CSS3 logo'>`;
       }  else if (i === 'es6') {
-        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/es6.svg' class='tech-icon-svg' alt='JavaScript ES6 logo'>`;
+        output += `<img src='https://www.sandersbroscoffee.com/personal-portfolio/icons/es6.svg' class='tech-icon-svg' alt='JavaScript ES6 logo'>`;
       } else if (i === 'firebase') {
-        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/firebase.svg' class='tech-icon-svg' alt='Firebase logo'>`;
+        output += `<img src='https://www.sandersbroscoffee.com/personal-portfolio/icons/firebase.svg' class='tech-icon-svg' alt='Firebase logo'>`;
       } else if (i === 'grunt') {
-        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/grunt.svg' class='tech-icon-svg' alt='Grunt logo'>`;
+        output += `<img src='https://www.sandersbroscoffee.com/personal-portfolio/icons/grunt.svg' class='tech-icon-svg' alt='Grunt logo'>`;
       } else if (i === 'html5') {
-        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/html5.svg' class='tech-icon-svg' alt='HTML5 logo'>`;
+        output += `<img src='https://www.sandersbroscoffee.com/personal-portfolio/icons/html5.svg' class='tech-icon-svg' alt='HTML5 logo'>`;
       } else if (i === 'jquery') {
-        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/jquery.svg' class='tech-icon-svg' alt='jQuery logo'>`;
+        output += `<img src='https://www.sandersbroscoffee.com/personal-portfolio/icons/jquery.svg' class='tech-icon-svg' alt='jQuery logo'>`;
       } else if (i === 'node') {
-        output += `<img src='https://www.andymillion.com/personal-portfolio/icons/nodejs.svg' class='tech-icon-svg' alt='NodeJS logo'>`;
+        output += `<img src='https://www.sandersbroscoffee.com/personal-portfolio/icons/nodejs.svg' class='tech-icon-svg' alt='NodeJS logo'>`;
       }
     });
     output += `</div>`;
