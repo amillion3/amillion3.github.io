@@ -2,7 +2,7 @@
   "one": {
     "projectId": 1,
     "title": "Fix That Pothole",
-    "imageURL": "https://www.sandersbroscoffee.com/personal-portfolio/thumbnails/local-weather.png",
+    "imageURL": "https://www.sandersbroscoffee.com/personal-portfolio/thumbnails/fix-that-pothole.png",
     "description": "This app is for local citizens and government officials to easily add, track and fix potholes. Citizens can login to the app and add potholes in need of repair using a map interface. When adding potholes, users can specify how severe the pothole is (low, medium, high) and add additional details for government officials.",
     "techIcons": ["react", "react-router", "webpack", "mapbox", "leaflet", "es6","firebase", "sass", "css3","html5"],
     "isLive": true,

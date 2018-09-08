@@ -26,6 +26,22 @@ const buildIconStringForInsertion = input => {
         output += `<img src='https://www.sandersbroscoffee.com/personal-portfolio/icons/jquery.svg' class='tech-icon-svg' alt='jQuery logo'>`;
       } else if (i === 'node') {
         output += `<img src='https://www.sandersbroscoffee.com/personal-portfolio/icons/nodejs.svg' class='tech-icon-svg' alt='NodeJS logo'>`;
+      } else if (i === 'bootstrap') {
+        output += `<img src='https://www.sandersbroscoffee.com/personal-portfolio/icons/bootstrap.svg' class='tech-icon-svg' alt='Bootstrap 3 logo'>`;
+      } else if (i === 'leaflet') {
+        output += `<img src='https://www.sandersbroscoffee.com/personal-portfolio/icons/leaflet.svg' class='tech-icon-svg' alt='Leaflet logo'>`;
+      } else if (i === 'mapbox') {
+        output += `<img src='https://www.sandersbroscoffee.com/personal-portfolio/icons/mapbox.svg' class='tech-icon-svg' alt='Mapbox logo'>`;
+      } else if (i === 'react-router') {
+        output += `<img src='https://www.sandersbroscoffee.com/personal-portfolio/icons/react-router.svg' class='tech-icon-svg' alt='React Router logo'>`;
+      } else if (i === 'react') {
+        output += `<img src='https://www.sandersbroscoffee.com/personal-portfolio/icons/react.svg' class='tech-icon-svg' alt='React logo'>`;
+      } else if (i === 'sass') {
+        output += `<img src='https://www.sandersbroscoffee.com/personal-portfolio/icons/sass.svg' class='tech-icon-svg' alt='Sass logo'>`;
+      } else if (i === 'webpack') {
+        output += `<img src='https://www.sandersbroscoffee.com/personal-portfolio/icons/webpack.svg' class='tech-icon-svg' alt='Webpack logo'>`;
+      } else if (i === 'node') {
+        output += `<img src='https://www.sandersbroscoffee.com/personal-portfolio/icons/nodejs.svg' class='tech-icon-svg' alt='NodeJS logo'>`;
       }
     });
     output += `</div>`;
