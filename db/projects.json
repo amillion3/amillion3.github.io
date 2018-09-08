@@ -1,36 +1,46 @@
 {
   "one": {
     "projectId": 1,
+    "title": "Fix That Pothole",
+    "imageURL": "https://www.sandersbroscoffee.com/personal-portfolio/thumbnails/local-weather.png",
+    "description": "This app is for local citizens and government officials to easily add, track and fix potholes. Citizens can login to the app and add potholes in need of repair using a map interface. When adding potholes, users can specify how severe the pothole is (low, medium, high) and add additional details for government officials.",
+    "techIcons": ["react", "react-router", "webpack", "mapbox", "leaflet", "es6","firebase", "sass", "css3","html5"],
+    "isLive": true,
+    "githubURL": "https://github.com/amillion3/fix-that-pothole",
+    "liveDemoURL": "https://fix-that-pothole.andymillion.com/"
+  },
+  "two": {
+    "projectId": 2,
     "title": "Local Weather",
     "imageURL": "https://www.sandersbroscoffee.com/personal-portfolio/thumbnails/local-weather.png",
     "description": "This app will display weather based on a zipcode the user inputs. The user must register before having access to this app. Data is stored and retrieved from Firebase and will be formatted and displayed on the screen for the user to see. The user can see today's weather or switch to a 5-day forecast.",
-    "techIcons": ["grunt","browserify","node","es6", "jquery","firebase", "css3","html5"],
+    "techIcons": ["grunt","browserify","node","es6", "jquery","firebase","bootstrap", "css3","html5"],
     "isLive": true,
     "githubURL": "https://github.com/amillion3/local-weather",
     "liveDemoURL": "https://local-weather.andymillion.com/"
   },
-  "two": {
+  "three": {
     "projectId": 2,
     "title": "Ex-Tracker",
     "imageURL": "https://www.sandersbroscoffee.com/personal-portfolio/thumbnails/ex-tracker.png",
     "description": "This app is used to track my fictional 'exs'. The user is able to search for names or addresses (such as 'Chic-Fil-A' or '6500 Charlotte Pike') via a search box. The user can also filter by the time of day my ex usually frequents those locations. Using jQuery over vanilla JavaScript, the functionality is basic, but important.",
-    "techIcons": ["grunt","browserify","node","es6", "jquery","firebase", "css3","html5"],
+    "techIcons": ["grunt","browserify","node","es6", "jquery","firebase","bootstrap", "css3","html5"],
     "isLive": true,
     "githubURL": "https://github.com/amillion3/ex-tracker",
     "liveDemoURL": "https://ex-tracker.andymillion.com/"
   },
-  "three": {
-    "projectId": 3,
+  "four": {
+    "projectId": 4,
     "title": "Nutshell",
     "imageURL": "https://www.sandersbroscoffee.com/personal-portfolio/thumbnails/nutshell.png",
     "description": "Group Project. We had 7 days to create a Facebook-like, single page app. Using Firebase, we had to setup authentication, specifically, register and login functionality. Logged in users can use these 5 modules with full CRUD capabilities: messaging, events, tasking, friends, and articles. This is light on the styling, but heavy on the concepts and teamwork.",
-    "techIcons": ["grunt","browserify","node","es6", "jquery","firebase", "css3","html5"],
+    "techIcons": ["grunt","browserify","node","es6", "jquery","firebase","bootstrap", "css3","html5"],
     "isLive": true,
     "githubURL": "https://github.com/amillion3/nutshell-adobe-bricks",
     "liveDemoURL": "https://nutshell-df075.firebaseapp.com/"
   },
-  "four": {
-    "projectId": 4,
+  "five": {
+    "projectId": 5,
     "title": "jQuery Calculator",
     "imageURL": "https://www.sandersbroscoffee.com/personal-portfolio/thumbnails/jquery-calculator.png",
     "description": "The goal of building this calculator was to work with jQuery and manipulate the DOM. As well, the logic behind building a calculator is quite complex and took some work to figure out. In the end, the user is able to string multiple operations together. However, the calculator is not smart enough to factor in order of operations.",
@@ -39,24 +49,14 @@
     "githubURL": "https://github.com/amillion3/jquery-calculator",
     "liveDemoURL": "https://jquery-calculator.firebaseapp.com/"
   },
-  "five": {
-    "projectId": 5,
+  "six": {
+    "projectId": 6,
     "title": "Movie Maker",
     "imageURL": "https://www.sandersbroscoffee.com/personal-portfolio/thumbnails/movie-maker.png",
     "description": "This project aimed to use NodeJS, Grunt and Browserify in a more complex manner. This app allows a user to enter in a movie budget and then add different movie elements to their movie. Each movie element costs a certain amount of money. If the user goes over budget, they cannot make the movie. If the user does not include one movie element from each category, they cannot make the movie. Styling was kept fairly simple on this app, the focus was on functionality.",
-    "techIcons": ["grunt","browserify","node","es6", "css3","html5"],
+    "techIcons": ["grunt","browserify","node","es6","bootstrap", "css3","html5"],
     "isLive": false,
     "githubURL": "https://github.com/amillion3/movie-maker",
-    "liveDemoURL": ""
-  },
-  "six": {
-    "projectId": 6,
-    "title": "Solar System",
-    "imageURL": "https://www.sandersbroscoffee.com/personal-portfolio/thumbnails/solar-system.png",
-    "description": "This single page app is a brief look at our solar system. Using information sourced from Wikipedia, this page was to demonstrate our ability to call and process XHRs from local JSON files.",
-    "techIcons": ["es6", "css3","html5"],
-    "isLive": false,
-    "githubURL": "https://github.com/amillion3/solar-system",
     "liveDemoURL": ""
   }
 }
